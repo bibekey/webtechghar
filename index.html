@@ -1,2304 +1,3691 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="WebTechGhar | Professional website development, web design, e-commerce, SEO, maintenance and digital solutions from Nepal. Fully professional service.">
-<meta name="keywords" content="WebTechGhar, web development Nepal, website design Biratnagar, web developer Nepal, ecommerce website, SEO Nepal, website maintenance">
-<meta name="author" content="WebTechGhar">
-<meta name="theme-color" content="#174c73">
-<title>WebTechGhar</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="assets/main-style.css">
-<link rel="icon" href="favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <meta name="description"
+        content="WebTechGhar provides professional web design, web development, e-commerce, SEO, website maintenance and digital solutions from Nepal.">
 
-/* ================================
-   GOOGLE FONTS
-================================ */
+    <meta name="keywords"
+        content="WebTechGhar, web development Nepal, website design Nepal, e-commerce Nepal, SEO Nepal, website maintenance, web developer">
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+    <meta name="author" content="WebTechGhar">
 
+    <meta name="theme-color" content="#174c73">
 
-/* ================================
-   MAIN COLORS
-================================ */
+    <title>WebTechGhar | Web Design & Development</title>
 
-:root {
-    --blue: #174c73;
-    --dark-blue: #0d3553;
+    <link rel="icon" href="img/logo.png">
 
-    --copper: #b8785b;
-    --light-copper: #d29a7e;
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    --text: #172331;
-    --gray: #667484;
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    --light-bg: #f6f9fc;
-    --white: #ffffff;
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    --border: #e5ebf1;
 
-    --shadow: 0 18px 50px rgba(15, 42, 66, 0.10);
+    <style>
 
-    --radius: 22px;
-}
+        /* =========================
+           VARIABLES
+        ========================= */
 
+        :root {
+            --blue: #174c73;
+            --dark-blue: #0d3553;
 
-/* ================================
-   BASIC RESET
-================================ */
+            --copper: #b8785b;
+            --light-copper: #d29a7e;
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+            --text: #172331;
+            --gray: #667484;
 
-html {
-    scroll-behavior: smooth;
-}
+            --light-bg: #f6f9fc;
+            --white: #ffffff;
 
-body {
-    font-family: Inter, Arial, sans-serif;
-    color: var(--text);
-    background: white;
-    line-height: 1.65;
-    overflow-x: hidden;
-}
+            --border: #e5ebf1;
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+            --green: #20b45d;
 
-img {
-    max-width: 100%;
-    display: block;
-}
+            --shadow: 0 20px 60px rgba(15, 42, 66, .10);
 
+            --radius: 22px;
+        }
 
-/* ================================
-   COMMON CONTAINER
-================================ */
 
-.container {
-    width: min(1160px, 92%);
-    margin: auto;
-}
+        /* =========================
+           RESET
+        ========================= */
 
-.section {
-    padding: 100px 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.section-head {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 55px;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            font-family: Inter, Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
 
-/* ================================
-   SMALL SECTION TITLE
-================================ */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    padding: 7px 13px;
-    border-radius: 50px;
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
 
-    background: rgba(184, 120, 91, 0.08);
-    border: 1px solid rgba(184, 120, 91, 0.22);
+        .container {
+            width: min(1160px, 92%);
+            margin: auto;
+        }
 
-    color: var(--copper);
+        .section {
+            padding: 100px 0;
+        }
 
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
 
-    margin-bottom: 14px;
-}
+        /* =========================
+           TYPOGRAPHY
+        ========================= */
 
-.eyebrow i {
-    font-size: 0.8rem;
-}
+        h1,
+        h2,
+        h3 {
+            font-family: Poppins, sans-serif;
+            line-height: 1.15;
+        }
 
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin-bottom: 16px;
+        }
 
-/* ================================
-   HEADINGS
-================================ */
+        .section-head {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
 
-h1,
-h2,
-h3 {
-    font-family: Poppins, Inter, sans-serif;
-    line-height: 1.15;
-}
+        .section-head p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
 
-h2 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    margin-bottom: 16px;
-}
 
-.section-head p {
-    color: var(--gray);
-    font-size: 1.02rem;
-}
+        /* =========================
+           EYEBROW
+        ========================= */
 
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
 
-/* ================================
-   HEADER
-================================ */
+            padding: 7px 13px;
 
-header {
-    position: fixed;
+            background: rgba(184, 120, 91, .08);
 
-    top: 0;
-    left: 0;
+            border: 1px solid rgba(184, 120, 91, .22);
 
-    width: 100%;
+            border-radius: 50px;
 
-    z-index: 1000;
+            color: var(--copper);
 
-    background: rgba(255, 255, 255, 0.82);
+            font-size: .75rem;
+            font-weight: 700;
 
-    backdrop-filter: blur(18px);
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
 
-    border-bottom: 1px solid rgba(229, 235, 241, 0.8);
+            margin-bottom: 14px;
+        }
 
-    transition: 0.3s;
-}
+        .eyebrow i {
+            font-size: .8rem;
+        }
 
-header.scrolled {
-    box-shadow: 0 10px 35px rgba(15, 42, 66, 0.08);
-}
 
+        /* =========================
+           HEADER
+        ========================= */
 
-/* ================================
-   NAVIGATION
-================================ */
+        header {
+            position: fixed;
 
-.nav {
-    min-height: 82px;
+            top: 0;
+            left: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+            width: 100%;
 
-    gap: 25px;
-}
+            z-index: 1000;
 
+            background: rgba(255,255,255,.88);
 
-/* LOGO */
+            backdrop-filter: blur(18px);
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+            border-bottom: 1px solid rgba(229,235,241,.8);
 
-.logo img {
-    width: 58px;
-    height: 58px;
+            transition: .3s;
+        }
 
-    object-fit: contain;
-}
+        header.scrolled {
+            box-shadow: 0 10px 35px rgba(15,42,66,.08);
+        }
 
-.logo-text {
-    font-family: Poppins, sans-serif;
+        .nav {
+            min-height: 82px;
 
-    font-weight: 800;
-    font-size: 1.35rem;
+            display: flex;
 
-    color: var(--blue);
-}
+            align-items: center;
+            justify-content: space-between;
 
-.logo-text span {
-    color: var(--copper);
-}
+            gap: 25px;
+        }
 
-.logo small {
-    display: block;
 
-    font-size: 0.45rem;
+        /* =========================
+           LOGO
+        ========================= */
 
-    color: var(--gray);
+        .logo {
+            display: flex;
 
-    font-weight: 700;
+            align-items: center;
 
-    letter-spacing: 1.2px;
+            gap: 10px;
+        }
 
-    margin-top: -3px;
-}
+        .logo img {
+            width: 52px;
+            height: 52px;
 
+            object-fit: contain;
+        }
 
-/* NAV LINKS */
+        .logo-text {
+            font-family: Poppins, sans-serif;
 
-.nav-links {
-    display: flex;
-    align-items: center;
+            font-size: 1.3rem;
 
-    gap: 27px;
+            font-weight: 800;
 
-    font-size: 0.92rem;
+            color: var(--blue);
+        }
 
-    font-weight: 600;
-}
+        .logo-text span {
+            color: var(--copper);
+        }
 
-.nav-links a {
-    position: relative;
+        .logo small {
+            display: block;
 
-    padding: 28px 0;
-}
+            color: var(--gray);
 
-.nav-links a::after {
-    content: "";
+            font-size: .43rem;
 
-    position: absolute;
+            font-weight: 700;
 
-    left: 0;
-    bottom: 20px;
+            letter-spacing: 1.1px;
 
-    width: 0;
-    height: 2px;
+            margin-top: -3px;
+        }
 
-    background: var(--copper);
 
-    transition: 0.3s;
-}
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-.nav-links a:hover::after {
-    width: 100%;
-}
+        .nav-links {
+            display: flex;
 
+            align-items: center;
 
-/* NAV BUTTON */
+            gap: 26px;
 
-.nav-cta,
-.btn {
-    display: inline-flex;
+            font-size: .9rem;
 
-    align-items: center;
-    justify-content: center;
+            font-weight: 600;
+        }
 
-    gap: 9px;
+        .nav-links a {
+            position: relative;
 
-    border-radius: 12px;
+            padding: 28px 0;
+        }
 
-    padding: 13px 20px;
+        .nav-links a::after {
+            content: "";
 
-    font-weight: 800;
+            position: absolute;
 
-    transition: 0.3s;
-}
+            left: 0;
+            bottom: 20px;
 
-.nav-cta {
-    background: var(--blue);
-    color: white;
-}
+            width: 0;
+            height: 2px;
 
-.nav-cta:hover,
-.btn-primary:hover {
-    background: var(--dark-blue);
+            background: var(--copper);
 
-    transform: translateY(-2px);
-}
+            transition: .3s;
+        }
 
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-/* MOBILE MENU */
 
-.menu {
-    display: none;
+        /* =========================
+           BUTTONS
+        ========================= */
 
-    background: none;
-    border: 0;
+        .btn {
+            display: inline-flex;
 
-    font-size: 1.7rem;
+            align-items: center;
+            justify-content: center;
 
-    color: var(--blue);
+            gap: 9px;
 
-    cursor: pointer;
-}
+            padding: 13px 20px;
 
+            border-radius: 12px;
 
-/* ================================
-   HERO SECTION
-================================ */
+            font-weight: 800;
 
-.hero {
-    min-height: 100vh;
+            transition: .3s;
 
-    padding-top: 120px;
+            cursor: pointer;
+        }
 
-    display: flex;
-    align-items: center;
+        .btn-primary {
+            background: var(--blue);
 
-    position: relative;
+            color: white;
+        }
 
-    background:
-        radial-gradient(
-            circle at 90% 15%,
-            rgba(184, 120, 91, 0.14),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 10% 80%,
-            rgba(23, 76, 115, 0.10),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f7fafc 100%
-        );
-}
+        .btn-primary:hover {
+            background: var(--dark-blue);
 
-.hero-grid {
-    display: grid;
+            transform: translateY(-3px);
+        }
 
-    grid-template-columns: 1.08fr 0.92fr;
+        .btn-outline {
+            background: white;
 
-    align-items: center;
+            color: var(--blue);
 
-    gap: 65px;
-}
+            border: 1px solid #ccd8e2;
+        }
 
-.hero-copy {
-    animation: fadeUp 0.9s ease both;
-}
+        .btn-outline:hover {
+            border-color: var(--blue);
 
+            transform: translateY(-3px);
+        }
 
-/* HERO BADGE */
+        .nav-cta {
+            background: var(--blue);
 
-.hero-badge {
-    display: inline-flex;
+            color: white;
 
-    align-items: center;
+            padding: 12px 18px;
 
-    gap: 8px;
+            border-radius: 11px;
 
-    padding: 8px 13px;
+            font-size: .82rem;
 
-    border: 1px solid #dce7ef;
+            font-weight: 800;
 
-    background: white;
+            transition: .3s;
+        }
 
-    border-radius: 999px;
+        .nav-cta:hover {
+            background: var(--dark-blue);
 
-    color: var(--blue);
+            transform: translateY(-2px);
+        }
 
-    font-size: 0.8rem;
 
-    font-weight: 800;
+        /* =========================
+           MOBILE MENU
+        ========================= */
 
-    margin-bottom: 22px;
+        .menu {
+            display: none;
 
-    box-shadow: 0 7px 25px rgba(15, 42, 66, 0.06);
-}
+            border: 0;
 
-.dot {
-    width: 8px;
-    height: 8px;
+            background: none;
 
-    background: #35ad72;
+            color: var(--blue);
 
-    border-radius: 50%;
+            font-size: 1.5rem;
 
-    box-shadow: 0 0 0 5px rgba(53, 173, 114, 0.12);
-}
+            cursor: pointer;
+        }
 
 
-/* HERO TITLE */
+        /* =========================
+           HERO
+        ========================= */
 
-.hero h1 {
-    font-size: clamp(2.7rem, 5.8vw, 5.25rem);
+        .hero {
+            min-height: 100vh;
 
-    letter-spacing: -2px;
+            padding-top: 120px;
 
-    margin-bottom: 22px;
-}
+            display: flex;
 
-.gradient-text {
-    background: linear-gradient(
-        90deg,
-        var(--blue),
-        var(--copper)
-    );
+            align-items: center;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+            position: relative;
 
-    color: transparent;
-}
+            background:
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(184,120,91,.14),
+                    transparent 28%
+                ),
 
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(23,76,115,.10),
+                    transparent 30%
+                ),
 
-/* HERO DESCRIPTION */
+                linear-gradient(
+                    135deg,
+                    #fff,
+                    #f7fafc
+                );
+        }
 
-.hero-copy > p {
-    font-size: 1.12rem;
+        .hero-grid {
+            display: grid;
 
-    color: var(--gray);
+            grid-template-columns: 1fr 1fr;
 
-    max-width: 650px;
+            align-items: center;
 
-    margin-bottom: 30px;
-}
+            gap: 70px;
+        }
 
+        .hero-copy {
+            animation: fadeUp .9s ease both;
+        }
 
-/* HERO BUTTONS */
 
-.actions {
-    display: flex;
+        /* HERO BADGE */
 
-    flex-wrap: wrap;
+        .hero-badge {
+            display: inline-flex;
 
-    gap: 13px;
-}
+            align-items: center;
 
-.btn-primary {
-    background: var(--blue);
-    color: white;
-}
+            gap: 8px;
 
-.btn-outline {
-    border: 1px solid #ccd8e2;
+            padding: 8px 13px;
 
-    background: white;
+            background: white;
 
-    color: var(--blue);
-}
+            border: 1px solid #dce7ef;
 
-.btn-outline:hover {
-    border-color: var(--blue);
+            border-radius: 999px;
 
-    transform: translateY(-2px);
-}
+            color: var(--blue);
 
+            font-size: .78rem;
 
-/* HERO CONTACT */
+            font-weight: 800;
 
-.hero-contact {
-    display: flex;
+            margin-bottom: 22px;
 
-    gap: 25px;
+            box-shadow: 0 7px 25px rgba(15,42,66,.06);
+        }
 
-    flex-wrap: wrap;
+        .dot {
+            width: 8px;
+            height: 8px;
 
-    margin-top: 28px;
+            background: #35ad72;
 
-    color: var(--gray);
+            border-radius: 50%;
 
-    font-size: 0.88rem;
-}
+            box-shadow: 0 0 0 5px rgba(53,173,114,.12);
+        }
 
-.hero-contact strong {
-    color: var(--text);
-}
 
+        /* HERO TITLE */
 
-/* ================================
-   HERO CARD
-================================ */
+        .hero h1 {
+            font-size: clamp(2.8rem, 5.5vw, 5rem);
 
-.hero-visual {
-    position: relative;
+            letter-spacing: -2px;
 
-    display: flex;
+            margin-bottom: 22px;
+        }
 
-    justify-content: center;
+        .gradient-text {
+            display: block;
 
-    animation: float 5s ease-in-out infinite;
-}
+            background: linear-gradient(
+                90deg,
+                var(--blue),
+                var(--copper)
+            );
 
-.hero-card {
-    width: min(450px, 100%);
+            -webkit-background-clip: text;
 
-    background: white;
+            background-clip: text;
 
-    border: 1px solid #e4ebf1;
+            color: transparent;
+        }
 
-    border-radius: 32px;
+        .hero-copy > p {
+            max-width: 650px;
 
-    padding: 34px;
+            color: var(--gray);
 
-    box-shadow: var(--shadow);
+            font-size: 1.08rem;
 
-    position: relative;
-}
+            margin-bottom: 30px;
+        }
 
-.hero-card::before {
-    content: "";
 
-    position: absolute;
+        /* HERO ACTIONS */
 
-    inset: -15px;
+        .actions {
+            display: flex;
 
-    border-radius: 42px;
+            flex-wrap: wrap;
 
-    border: 1px dashed rgba(184, 120, 91, 0.35);
+            gap: 13px;
+        }
 
-    z-index: -1;
-}
 
-.hero-logo {
-    width: 230px;
+        /* HERO CONTACT */
 
-    margin: 0 auto 20px;
-}
+        .hero-contact {
+            display: flex;
 
-.hero-card h3 {
-    text-align: center;
+            flex-wrap: wrap;
 
-    font-size: 1.55rem;
+            gap: 20px;
 
-    color: var(--blue);
-}
+            margin-top: 27px;
 
-.hero-card p {
-    text-align: center;
+            color: var(--gray);
 
-    color: var(--gray);
+            font-size: .82rem;
+        }
 
-    font-size: 0.9rem;
+        .hero-contact strong {
+            color: var(--text);
+        }
 
-    margin: 8px 0 25px;
-}
 
+        /* =========================
+           HERO IMAGE
+        ========================= */
 
-/* HERO SMALL BOXES */
+        .hero-visual {
+            position: relative;
 
-.mini-grid {
-    display: grid;
+            display: flex;
 
-    grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
 
-    gap: 12px;
-}
+            align-items: center;
+        }
 
-.mini {
-    padding: 15px;
+        .hero-image-wrap {
+            width: min(520px,100%);
 
-    background: var(--light-bg);
+            position: relative;
 
-    border-radius: 14px;
+            padding: 15px;
+        }
 
-    text-align: center;
-}
+        .hero-image {
+            width: 100%;
 
-.mini strong {
-    display: block;
+            height: 510px;
 
-    color: var(--blue);
+            object-fit: cover;
 
-    font-size: 1.1rem;
-}
+            border-radius: 32px;
 
-.mini span {
-    font-size: 0.72rem;
+            box-shadow: 0 30px 70px rgba(15,42,66,.18);
 
-    color: var(--gray);
-}
+            border: 1px solid rgba(255,255,255,.8);
+        }
 
+        .hero-image-wrap::before {
+            content: "";
 
-/* ================================
-   MOVING TEXT BAR
-================================ */
+            position: absolute;
 
-.marquee {
-    background: var(--blue);
+            width: 150px;
+            height: 150px;
 
-    color: white;
+            top: -15px;
+            right: -15px;
 
-    overflow: hidden;
+            border-radius: 30px;
 
-    padding: 15px 0;
-}
+            background: rgba(184,120,91,.12);
 
-.marquee-track {
-    display: flex;
+            z-index: -1;
+        }
 
-    width: max-content;
+        .hero-image-wrap::after {
+            content: "";
 
-    animation: marquee 24s linear infinite;
-}
+            position: absolute;
 
-.marquee span {
-    font-weight: 700;
+            width: 180px;
+            height: 180px;
 
-    white-space: nowrap;
+            bottom: -25px;
+            left: -25px;
 
-    padding: 0 28px;
+            border-radius: 50%;
 
-    font-size: 0.86rem;
-}
+            border: 1px solid rgba(23,76,115,.18);
 
-.marquee span::after {
-    content: "|";
+            z-index: -1;
+        }
 
-    color: var(--light-copper);
 
-    margin-left: 55px;
-}
+        /* FLOATING CARDS */
 
+        .floating-card {
+            position: absolute;
 
-/* ================================
-   SERVICE CARDS
-================================ */
+            display: flex;
 
-.services {
-    background: var(--light-bg);
-}
+            align-items: center;
 
-.cards {
-    display: grid;
+            gap: 11px;
 
-    grid-template-columns: repeat(3, 1fr);
+            padding: 13px 16px;
 
-    gap: 22px;
-}
+            background: rgba(255,255,255,.95);
 
-.card {
-    background: white;
+            backdrop-filter: blur(15px);
 
-    border: 1px solid var(--border);
+            border: 1px solid rgba(229,235,241,.9);
 
-    border-radius: var(--radius);
+            border-radius: 15px;
 
-    padding: 30px;
+            box-shadow: 0 15px 35px rgba(15,42,66,.13);
 
-    box-shadow: 0 8px 25px rgba(15, 42, 66, 0.04);
+            z-index: 5;
+        }
 
-    transition: 0.35s;
+        .floating-card strong {
+            display: block;
 
-    position: relative;
+            color: var(--blue);
 
-    overflow: hidden;
-}
+            font-size: .77rem;
+        }
 
-.card::before {
-    content: "";
+        .floating-card span {
+            display: block;
 
-    position: absolute;
+            color: var(--gray);
 
-    top: 0;
-    left: 0;
+            font-size: .65rem;
 
-    width: 0;
-    height: 3px;
+            margin-top: 2px;
+        }
 
-    background: linear-gradient(
-        90deg,
-        var(--blue),
-        var(--copper)
-    );
+        .floating-icon {
+            width: 37px;
+            height: 37px;
 
-    transition: 0.35s;
-}
+            display: grid;
 
-.card:hover {
-    transform: translateY(-8px);
+            place-items: center;
 
-    box-shadow: var(--shadow);
-}
+            border-radius: 11px;
 
-.card:hover::before {
-    width: 100%;
-}
+            background: #eef5fa;
 
+            color: var(--blue);
+        }
 
-/* CARD ICON */
+        .card-top {
+            top: 45px;
+            right: -25px;
 
-.icon {
-    width: 52px;
-    height: 52px;
+            animation: floatSmall 4s ease-in-out infinite;
+        }
 
-    border-radius: 15px;
+        .card-bottom {
+            bottom: 55px;
+            left: -25px;
 
-    background: #eef5fa;
+            animation: floatSmall 4.5s ease-in-out infinite;
+        }
 
-    color: var(--blue);
 
-    display: grid;
+        /* IMAGE BADGE */
 
-    place-items: center;
+        .image-badge {
+            position: absolute;
 
-    font-size: 1.35rem;
+            right: 25px;
+            bottom: 15px;
 
-    margin-bottom: 20px;
-}
+            display: flex;
 
-.card h3 {
-    font-size: 1.2rem;
+            align-items: center;
 
-    margin-bottom: 10px;
-}
+            gap: 8px;
 
-.card p {
-    color: var(--gray);
+            padding: 9px 13px;
 
-    font-size: 0.91rem;
-}
+            border-radius: 999px;
 
-.card ul {
-    list-style: none;
+            background: rgba(13,53,83,.93);
 
-    margin-top: 17px;
+            color: white;
 
-    color: var(--gray);
+            font-size: .67rem;
 
-    font-size: 0.84rem;
-}
+            font-weight: 700;
+        }
 
-.card li {
-    margin: 7px 0;
-}
+        .badge-dot {
+            width: 7px;
+            height: 7px;
 
-.card li::before {
-    content: "✓";
+            background: #35ad72;
 
-    color: var(--copper);
+            border-radius: 50%;
+        }
 
-    font-weight: 900;
 
-    margin-right: 8px;
-}
+        /* =========================
+           MARQUEE
+        ========================= */
 
+        .marquee {
+            overflow: hidden;
 
-/* ================================
-   ABOUT SECTION
-================================ */
+            background: var(--blue);
 
-.about-grid {
-    display: grid;
+            color: white;
 
-    grid-template-columns: 0.85fr 1.15fr;
+            padding: 15px 0;
+        }
 
-    gap: 70px;
+        .marquee-track {
+            display: flex;
 
-    align-items: center;
-}
+            width: max-content;
 
-.about-visual {
-    min-height: 430px;
+            animation: marquee 25s linear infinite;
+        }
 
-    border-radius: 32px;
+        .marquee span {
+            white-space: nowrap;
 
-    background: linear-gradient(
-        145deg,
-        rgba(23, 76, 115, 0.95),
-        rgba(13, 53, 83, 0.96)
-    );
+            padding: 0 28px;
 
-    position: relative;
+            font-size: .82rem;
 
-    display: grid;
+            font-weight: 700;
+        }
 
-    place-items: center;
+        .marquee span::after {
+            content: "•";
 
-    overflow: hidden;
+            color: var(--light-copper);
 
-    box-shadow: var(--shadow);
-}
+            margin-left: 55px;
+        }
 
-.about-visual::after {
-    content: "";
 
-    position: absolute;
+        /* =========================
+           SERVICES
+        ========================= */
 
-    width: 330px;
-    height: 330px;
+        .services,
+        .projects,
+        .contact {
+            background: var(--light-bg);
+        }
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
+        .cards {
+            display: grid;
 
-    border-radius: 50%;
+            grid-template-columns: repeat(3,1fr);
 
-    animation: spin 20s linear infinite;
-}
+            gap: 22px;
+        }
 
-.about-visual img {
-    width: 240px;
+        .card {
+            position: relative;
 
-    position: relative;
+            overflow: hidden;
 
-    z-index: 2;
+            padding: 30px;
 
-    filter: drop-shadow(
-        0 20px 25px rgba(0, 0, 0, 0.18)
-    );
-}
+            background: white;
 
+            border: 1px solid var(--border);
 
-/* ABOUT TAG */
+            border-radius: var(--radius);
 
-.remote-tag {
-    position: absolute;
+            transition: .35s;
+        }
 
-    bottom: 22px;
-    left: 22px;
-    right: 22px;
+        .card::before {
+            content: "";
 
-    z-index: 4;
+            position: absolute;
 
-    background: rgba(255, 255, 255, 0.12);
+            top: 0;
+            left: 0;
 
-    backdrop-filter: blur(10px);
+            width: 0;
+            height: 3px;
 
-    color: white;
+            background: linear-gradient(
+                90deg,
+                var(--blue),
+                var(--copper)
+            );
 
-    padding: 15px;
+            transition: .35s;
+        }
 
-    border-radius: 14px;
+        .card:hover {
+            transform: translateY(-8px);
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: var(--shadow);
+        }
 
-    text-align: center;
+        .card:hover::before {
+            width: 100%;
+        }
 
-    font-weight: 700;
-}
+        .icon {
+            width: 52px;
+            height: 52px;
 
+            display: grid;
 
-/* ABOUT TEXT */
+            place-items: center;
 
-.about-copy p {
-    color: var(--gray);
+            margin-bottom: 20px;
 
-    margin: 0 0 17px;
-}
+            border-radius: 15px;
 
+            background: #eef5fa;
 
-/* ABOUT CHECK LIST */
+            color: var(--blue);
 
-.check-grid {
-    display: grid;
+            font-size: 1.3rem;
+        }
 
-    grid-template-columns: repeat(2, 1fr);
+        .card h3 {
+            font-size: 1.15rem;
 
-    gap: 12px;
+            margin-bottom: 10px;
+        }
 
-    margin: 25px 0;
-}
+        .card p {
+            color: var(--gray);
 
-.check {
-    padding: 13px 15px;
+            font-size: .88rem;
+        }
 
-    background: var(--light-bg);
+        .card ul {
+            list-style: none;
 
-    border-radius: 12px;
+            margin-top: 17px;
 
-    font-size: 0.85rem;
+            color: var(--gray);
 
-    font-weight: 700;
-}
+            font-size: .82rem;
+        }
 
-.check b {
-    color: var(--copper);
+        .card li {
+            margin: 7px 0;
+        }
 
-    margin-right: 7px;
-}
+        .card li::before {
+            content: "✓";
 
+            color: var(--copper);
 
-/* ================================
-   PROCESS SECTION
-================================ */
+            font-weight: 900;
 
-.process {
-    background: #fbfcfd;
-}
+            margin-right: 8px;
+        }
 
-.process-grid {
-    display: grid;
 
-    grid-template-columns: repeat(5, 1fr);
+        /* =========================
+           ABOUT
+        ========================= */
 
-    gap: 14px;
-}
+        .about-grid {
+            display: grid;
 
-.step {
-    text-align: center;
+            grid-template-columns: .85fr 1.15fr;
 
-    position: relative;
+            gap: 70px;
 
-    padding: 15px;
-}
+            align-items: center;
+        }
 
-.step-number {
-    width: 48px;
-    height: 48px;
+        .about-visual {
+            min-height: 430px;
 
-    border-radius: 50%;
+            position: relative;
 
-    margin: 0 auto 17px;
+            display: grid;
 
-    display: grid;
+            place-items: center;
 
-    place-items: center;
+            overflow: hidden;
 
-    background: var(--blue);
+            border-radius: 32px;
 
-    color: white;
+            background: linear-gradient(
+                145deg,
+                var(--blue),
+                var(--dark-blue)
+            );
 
-    font-weight: 800;
+            box-shadow: var(--shadow);
+        }
 
-    box-shadow: 0 0 0 7px #eaf2f7;
-}
+        .about-visual img {
+            width: 230px;
 
-.step h3 {
-    font-size: 1rem;
+            filter: drop-shadow(
+                0 20px 25px rgba(0,0,0,.2)
+            );
+        }
 
-    margin-bottom: 7px;
-}
+        .about-visual::after {
+            content: "";
 
-.step p {
-    font-size: 0.78rem;
+            position: absolute;
 
-    color: var(--gray);
-}
+            width: 330px;
+            height: 330px;
 
-.step:not(:last-child)::after {
-    content: "";
+            border: 1px solid rgba(255,255,255,.15);
 
-    position: absolute;
+            border-radius: 50%;
 
-    top: 39px;
-    left: 68%;
+            animation: spin 20s linear infinite;
+        }
 
-    width: 65%;
-    height: 1px;
+        .remote-tag {
+            position: absolute;
 
-    border-top: 1px dashed #c7d5df;
-}
+            left: 22px;
+            right: 22px;
+            bottom: 22px;
 
+            padding: 15px;
 
-/* ================================
-   TECHNOLOGIES
-================================ */
+            text-align: center;
 
-.tech-grid {
-    display: flex;
+            border-radius: 14px;
 
-    flex-wrap: wrap;
+            background: rgba(255,255,255,.12);
 
-    justify-content: center;
+            backdrop-filter: blur(10px);
 
-    gap: 11px;
+            color: white;
 
-    max-width: 850px;
+            font-weight: 700;
 
-    margin: auto;
-}
+            z-index: 3;
+        }
 
-.tech {
-    padding: 10px 16px;
+        .about-copy p {
+            color: var(--gray);
 
-    border: 1px solid var(--border);
+            margin-bottom: 17px;
+        }
 
-    border-radius: 999px;
+        .check-grid {
+            display: grid;
 
-    background: white;
+            grid-template-columns: repeat(2,1fr);
 
-    font-size: 0.82rem;
+            gap: 12px;
 
-    font-weight: 700;
+            margin: 25px 0;
+        }
 
-    color: var(--blue);
+        .check {
+            padding: 13px 15px;
 
-    transition: 0.25s;
-}
+            background: var(--light-bg);
 
-.tech:hover {
-    background: var(--blue);
+            border-radius: 12px;
 
-    color: white;
+            font-size: .82rem;
 
-    transform: translateY(-3px);
-}
+            font-weight: 700;
+        }
 
+        .check b {
+            color: var(--copper);
 
-/* ================================
-   STATISTICS
-================================ */
+            margin-right: 7px;
+        }
 
-.stats {
-    background: linear-gradient(
-        120deg,
-        var(--blue),
-        var(--dark-blue)
-    );
 
-    color: white;
-}
+        /* =========================
+           PROCESS
+        ========================= */
 
-.stats-grid {
-    display: grid;
+        .process {
+            background: #fbfcfd;
+        }
 
-    grid-template-columns: repeat(4, 1fr);
+        .process-grid {
+            display: grid;
 
-    gap: 20px;
+            grid-template-columns: repeat(5,1fr);
 
-    text-align: center;
-}
+            gap: 14px;
+        }
 
-.stat strong {
-    font-family: Poppins, sans-serif;
+        .step {
+            position: relative;
 
-    font-size: 2.5rem;
+            text-align: center;
 
-    display: block;
-}
+            padding: 15px;
+        }
 
-.stat span {
-    opacity: 0.8;
+        .step-number {
+            width: 48px;
+            height: 48px;
 
-    font-size: 0.84rem;
-}
+            display: grid;
 
+            place-items: center;
 
-/* ================================
-   PROJECTS
-================================ */
+            margin: 0 auto 17px;
 
-.projects {
-    background: var(--light-bg);
-}
+            border-radius: 50%;
 
-.project-grid {
-    display: grid;
+            background: var(--blue);
 
-    grid-template-columns: repeat(3, 1fr);
+            color: white;
 
-    gap: 22px;
-}
+            font-weight: 800;
 
-.project {
-    background: white;
+            box-shadow: 0 0 0 7px #eaf2f7;
+        }
 
-    border: 1px solid var(--border);
+        .step h3 {
+            font-size: 1rem;
 
-    border-radius: 20px;
+            margin-bottom: 7px;
+        }
 
-    padding: 27px;
+        .step p {
+            color: var(--gray);
 
-    transition: 0.3s;
-}
+            font-size: .76rem;
+        }
 
-.project:hover {
-    transform: translateY(-6px);
+        .step:not(:last-child)::after {
+            content: "";
 
-    box-shadow: var(--shadow);
-}
+            position: absolute;
 
-.project-label {
-    font-size: 0.72rem;
+            top: 39px;
+            left: 68%;
 
-    text-transform: uppercase;
+            width: 65%;
 
-    letter-spacing: 1.5px;
+            border-top: 1px dashed #c7d5df;
+        }
 
-    color: var(--copper);
 
-    font-weight: 800;
-}
+        /* =========================
+           TECHNOLOGIES
+        ========================= */
 
-.project h3 {
-    margin: 9px 0;
-}
+        .tech-grid {
+            display: flex;
 
-.project p {
-    font-size: 0.86rem;
+            flex-wrap: wrap;
 
-    color: var(--gray);
-}
+            justify-content: center;
 
-.project .tagline {
-    display: inline-block;
+            gap: 11px;
 
-    margin-top: 18px;
+            max-width: 850px;
 
-    font-size: 0.72rem;
+            margin: auto;
+        }
 
-    background: #eef5fa;
+        .tech {
+            padding: 10px 16px;
 
-    color: var(--blue);
+            border: 1px solid var(--border);
 
-    padding: 6px 9px;
+            border-radius: 999px;
 
-    border-radius: 8px;
+            background: white;
 
-    font-weight: 700;
-}
+            color: var(--blue);
 
+            font-size: .8rem;
 
-/* ================================
-   CALL TO ACTION
-================================ */
+            font-weight: 700;
 
-.cta {
-    padding: 85px 0;
-}
+            transition: .25s;
+        }
 
-.cta-box {
-    background: linear-gradient(
-        135deg,
-        var(--blue),
-        var(--dark-blue)
-    );
+        .tech:hover {
+            background: var(--blue);
 
-    border-radius: 30px;
+            color: white;
 
-    padding: 60px;
+            transform: translateY(-3px);
+        }
 
-    color: white;
 
-    text-align: center;
+        /* =========================
+           STATS
+        ========================= */
 
-    position: relative;
+        .stats {
+            background: linear-gradient(
+                120deg,
+                var(--blue),
+                var(--dark-blue)
+            );
 
-    overflow: hidden;
-}
+            color: white;
+        }
 
-.cta-box::before,
-.cta-box::after {
-    content: "";
+        .stats-grid {
+            display: grid;
 
-    position: absolute;
+            grid-template-columns: repeat(4,1fr);
 
-    border: 1px solid rgba(255, 255, 255, 0.10);
+            gap: 20px;
 
-    border-radius: 50%;
-}
+            text-align: center;
+        }
 
-.cta-box::before {
-    width: 280px;
-    height: 280px;
+        .stat strong {
+            display: block;
 
-    right: -80px;
-    top: -150px;
-}
+            font-family: Poppins, sans-serif;
 
-.cta-box::after {
-    width: 180px;
-    height: 180px;
+            font-size: 2.5rem;
+        }
 
-    left: -70px;
-    bottom: -100px;
-}
+        .stat strong.plus::after {
+            content: "+";
+        }
 
-.cta-box > * {
-    position: relative;
+        .stat span {
+            opacity: .8;
 
-    z-index: 2;
-}
+            font-size: .83rem;
+        }
 
-.cta-box h2 {
-    max-width: 750px;
 
-    margin: 0 auto 15px;
-}
+        /* =========================
+           PROJECTS
+        ========================= */
 
-.cta-box p {
-    opacity: 0.8;
+        .project-grid {
+            display: grid;
 
-    max-width: 680px;
+            grid-template-columns: repeat(3,1fr);
 
-    margin: 0 auto 28px;
-}
+            gap: 22px;
+        }
 
-.cta-box .btn-primary {
-    background: white;
+        .project {
+            padding: 27px;
 
-    color: var(--blue);
-}
+            background: white;
 
-.cta-box .btn-primary:hover {
-    background: #f2f5f7;
-}
+            border: 1px solid var(--border);
 
-.whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+            border-radius: 20px;
 
-    width: 38px;
-    height: 38px;
+            transition: .3s;
+        }
 
-    border-radius: 50%;
+        .project:hover {
+            transform: translateY(-6px);
 
-    font-size: 17px;
+            box-shadow: var(--shadow);
+        }
 
-    animation: whatsappPulse 2s infinite;
-    transition: 0.3s ease;
-}
+        .project-label {
+            color: var(--copper);
 
-.whatsapp:hover {
-    transform: scale(1.1);
-}
+            font-size: .7rem;
 
-@keyframes whatsappPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35);
-    }
+            font-weight: 800;
 
-    70% {
-        box-shadow: 0 0 0 7px rgba(37, 211, 102, 0);
-    }
+            letter-spacing: 1.4px;
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
+            text-transform: uppercase;
+        }
 
-@media (max-width: 600px) {
-    .whatsapp {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
-    }
-}
+        .project h3 {
+            margin: 9px 0;
+        }
 
-/* ================================
-   CONTACT SECTION
-================================ */
+        .project p {
+            color: var(--gray);
 
-.contact {
-    background: var(--light-bg);
-}
+            font-size: .84rem;
+        }
 
-.contact-grid {
-    display: grid;
+        .tagline {
+            display: inline-block;
 
-    grid-template-columns: 0.8fr 1.2fr;
+            margin-top: 18px;
 
-    gap: 30px;
-}
+            padding: 6px 9px;
 
-.contact-info,
-.contact-form {
-    background: white;
+            border-radius: 8px;
 
-    border: 1px solid var(--border);
+            background: #eef5fa;
 
-    border-radius: 24px;
+            color: var(--blue);
 
-    padding: 32px;
-}
+            font-size: .7rem;
 
-.contact-info h3 {
-    font-size: 1.45rem;
+            font-weight: 700;
+        }
 
-    margin-bottom: 10px;
-}
 
-.contact-info > p {
-    color: var(--gray);
+        /* =========================
+           CTA
+        ========================= */
 
-    font-size: 0.9rem;
+        .cta {
+            padding: 85px 0;
+        }
 
-    margin-bottom: 25px;
-}
+        .cta-box {
+            position: relative;
 
+            overflow: hidden;
 
-/* CONTACT INFORMATION */
+            padding: 60px;
 
-.contact-item {
-    display: flex;
+            text-align: center;
 
-    gap: 13px;
+            border-radius: 30px;
 
-    padding: 15px 0;
+            color: white;
 
-    border-bottom: 1px solid var(--border);
-}
+            background: linear-gradient(
+                135deg,
+                var(--blue),
+                var(--dark-blue)
+            );
+        }
 
-.contact-item:last-child {
-    border: 0;
-}
+        .cta-box h2 {
+            max-width: 750px;
 
-.contact-icon {
-    width: 40px;
-    height: 40px;
+            margin: 0 auto 15px;
+        }
 
-    border-radius: 11px;
+        .cta-box p {
+            max-width: 680px;
 
-    background: #eef5fa;
+            margin: 0 auto 28px;
 
-    display: grid;
+            opacity: .8;
+        }
 
-    place-items: center;
+        .cta-box .btn-primary {
+            background: white;
 
-    color: var(--blue);
+            color: var(--blue);
+        }
 
-    flex-shrink: 0;
-}
+        .cta-box .btn-primary:hover {
+            background: #f2f5f7;
+        }
 
-.contact-item strong {
-    display: block;
 
-    font-size: 0.84rem;
-}
+        /* =========================
+           CONTACT
+        ========================= */
 
-.contact-item span,
-.contact-item a {
-    font-size: 0.82rem;
+        .contact-grid {
+            display: grid;
 
-    color: var(--gray);
-}
+            grid-template-columns: .8fr 1.2fr;
 
+            gap: 30px;
+        }
 
-/* ================================
-   CONTACT FORM
-================================ */
+        .contact-info,
+        .contact-form {
+            padding: 32px;
 
-form {
-    display: grid;
+            background: white;
 
-    grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--border);
 
-    gap: 15px;
-}
+            border-radius: 24px;
+        }
 
-.field.full {
-    grid-column: 1 / -1;
-}
+        .contact-info h3 {
+            font-size: 1.4rem;
 
-label {
-    display: block;
+            margin-bottom: 10px;
+        }
 
-    font-size: 0.75rem;
+        .contact-info > p {
+            color: var(--gray);
 
-    font-weight: 800;
+            font-size: .88rem;
 
-    margin-bottom: 7px;
+            margin-bottom: 25px;
+        }
 
-    color: var(--blue);
-}
+        .contact-item {
+            display: flex;
 
-input,
-select,
-textarea {
-    width: 100%;
+            gap: 13px;
 
-    padding: 13px 14px;
+            padding: 15px 0;
 
-    border: 1px solid #dbe4eb;
+            border-bottom: 1px solid var(--border);
+        }
 
-    border-radius: 11px;
+        .contact-item:last-child {
+            border: 0;
+        }
 
-    outline: none;
+        .contact-icon {
+            width: 40px;
+            height: 40px;
 
-    font: inherit;
+            flex-shrink: 0;
 
-    font-size: 0.86rem;
+            display: grid;
 
-    transition: 0.2s;
+            place-items: center;
 
-    background: white;
-}
+            border-radius: 11px;
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--blue);
+            background: #eef5fa;
 
-    box-shadow: 0 0 0 3px rgba(23, 76, 115, 0.08);
-}
+            color: var(--blue);
+        }
 
-textarea {
-    min-height: 130px;
+        .contact-item strong {
+            display: block;
 
-    resize: vertical;
-}
+            font-size: .82rem;
+        }
 
-.form-note {
-    font-size: 0.72rem;
+        .contact-item span,
+        .contact-item a {
+            color: var(--gray);
 
-    color: var(--gray);
+            font-size: .8rem;
+        }
 
-    margin-top: 10px;
-}
 
+        /* =========================
+           FORM
+        ========================= */
 
-/* ================================
-   FOOTER
-================================ */
+        form {
+            display: grid;
 
-footer {
-    background: #0b2438;
+            grid-template-columns: 1fr 1fr;
 
-    color: white;
+            gap: 15px;
+        }
 
-    padding: 60px 0 25px;
-}
+        .field.full {
+            grid-column: 1 / -1;
+        }
 
-.footer-grid {
-    display: grid;
+        label {
+            display: block;
 
-    grid-template-columns: 1.3fr 0.7fr 0.9fr;
+            color: var(--blue);
 
-    gap: 50px;
-}
+            font-size: .72rem;
 
-.footer-brand img {
-    width: 90px;
+            font-weight: 800;
 
-    margin-bottom: 12px;
-}
+            margin-bottom: 7px;
+        }
 
-.footer-brand p {
-    color: #aab9c5;
+        input,
+        select,
+        textarea {
+            width: 100%;
 
-    font-size: 0.83rem;
+            padding: 13px 14px;
 
-    max-width: 430px;
-}
+            border: 1px solid #dbe4eb;
 
-footer h3 {
-    font-size: 1rem;
+            border-radius: 11px;
 
-    margin-bottom: 17px;
-}
+            outline: none;
 
-footer a,
-footer li {
-    color: #aab9c5;
+            background: white;
 
-    font-size: 0.82rem;
-}
+            font-size: .84rem;
 
-footer li {
-    list-style: none;
+            transition: .2s;
+        }
 
-    margin: 8px 0;
-}
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--blue);
 
-footer a:hover {
-    color: white;
-}
+            box-shadow: 0 0 0 3px rgba(23,76,115,.08);
+        }
 
+        textarea {
+            min-height: 130px;
 
-/* FOOTER BOTTOM */
+            resize: vertical;
+        }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    margin-top: 40px;
+        /* =========================
+           FOOTER
+        ========================= */
 
-    padding-top: 20px;
+        footer {
+            padding: 60px 0 25px;
 
-    text-align: center;
+            background: #0b2438;
 
-    color: #8295a4;
+            color: white;
+        }
 
-    font-size: 0.72rem;
-}
+        .footer-grid {
+            display: grid;
 
+            grid-template-columns: 1.3fr .7fr .9fr;
 
-/* ================================
-   WHATSAPP BUTTON
-================================ */
+            gap: 50px;
+        }
 
-.whatsapp {
-    position: fixed;
+        .footer-brand img {
+            width: 85px;
 
-    right: 22px;
-    bottom: 22px;
+            margin-bottom: 12px;
+        }
 
-    width: 57px;
-    height: 57px;
+        .footer-brand p {
+            max-width: 430px;
 
-    border-radius: 50%;
+            color: #aab9c5;
 
-    display: grid;
+            font-size: .82rem;
+        }
 
-    place-items: center;
+        footer h3 {
+            font-size: 1rem;
 
-    background: #20b45d;
+            margin-bottom: 17px;
+        }
 
-    color: white;
+        footer ul {
+            list-style: none;
+        }
 
-    font-size: 1.5rem;
+        footer li {
+            margin: 8px 0;
 
-    z-index: 900;
+            color: #aab9c5;
 
-    box-shadow: 0 12px 30px rgba(32, 180, 93, 0.3);
+            font-size: .8rem;
+        }
 
-    animation: pulse 2.2s infinite;
-}
+        footer a {
+            color: #aab9c5;
 
+            transition: .2s;
+        }
 
-/* ================================
-   BACK TO TOP BUTTON
-================================ */
+        footer a:hover {
+            color: white;
+        }
 
-.top {
-    position: fixed;
+        .footer-bottom {
+            margin-top: 40px;
 
-    right: 22px;
-    bottom: 90px;
+            padding-top: 20px;
 
-    width: 40px;
-    height: 40px;
+            border-top: 1px solid rgba(255,255,255,.1);
 
-    border-radius: 10px;
+            text-align: center;
 
-    display: grid;
+            color: #8295a4;
 
-    place-items: center;
+            font-size: .7rem;
+        }
 
-    background: white;
 
-    color: var(--blue);
+        /* =========================
+           WHATSAPP
+        ========================= */
 
-    border: 1px solid var(--border);
+        .whatsapp {
+            position: fixed;
 
-    opacity: 0;
+            right: 22px;
+            bottom: 22px;
 
-    pointer-events: none;
+            width: 55px;
+            height: 55px;
 
-    transition: 0.3s;
+            display: grid;
 
-    z-index: 900;
-}
+            place-items: center;
 
-.top.show {
-    opacity: 1;
+            border-radius: 50%;
 
-    pointer-events: auto;
-}
+            background: var(--green);
 
+            color: white;
 
-/* ================================
-   SCROLL REVEAL
-================================ */
+            font-size: 1.45rem;
 
-.reveal {
-    opacity: 0;
+            z-index: 900;
 
-    transform: translateY(35px);
+            box-shadow: 0 12px 30px rgba(32,180,93,.3);
 
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
+            animation: pulse 2.2s infinite;
+        }
 
-.reveal.active {
-    opacity: 1;
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
 
-    transform: none;
-}
 
+        /* =========================
+           BACK TO TOP
+        ========================= */
 
-/* ================================
-   ANIMATIONS
-================================ */
+        .top {
+            position: fixed;
 
-@keyframes fadeUp {
+            right: 22px;
+            bottom: 90px;
 
-    from {
-        opacity: 0;
+            width: 40px;
+            height: 40px;
 
-        transform: translateY(25px);
-    }
+            display: grid;
 
-    to {
-        opacity: 1;
+            place-items: center;
 
-        transform: none;
-    }
-}
+            border-radius: 10px;
 
+            background: white;
 
-@keyframes float {
+            color: var(--blue);
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+            border: 1px solid var(--border);
 
-    50% {
-        transform: translateY(-12px);
-    }
-}
+            opacity: 0;
 
+            pointer-events: none;
 
-@keyframes spin {
+            transition: .3s;
 
-    to {
-        transform: rotate(360deg);
-    }
-}
+            z-index: 900;
+        }
 
+        .top.show {
+            opacity: 1;
 
-@keyframes marquee {
+            pointer-events: auto;
+        }
 
-    to {
-        transform: translateX(-50%);
-    }
-}
 
+        /* =========================
+           REVEAL
+        ========================= */
 
-@keyframes pulse {
+        .reveal {
+            opacity: 0;
 
-    0%,
-    100% {
-        box-shadow:
-            0 12px 30px rgba(32, 180, 93, 0.3);
-    }
+            transform: translateY(35px);
 
-    50% {
-        box-shadow:
-            0 12px 30px rgba(32, 180, 93, 0.3),
-            0 0 0 10px rgba(32, 180, 93, 0.08);
-    }
-}
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
 
+        .reveal.active {
+            opacity: 1;
 
-/* ================================
-   TABLET / SMALL LAPTOP
-================================ */
+            transform: none;
+        }
 
-@media (max-width: 950px) {
 
-    /* MOBILE NAVIGATION */
+        /* =========================
+           ANIMATIONS
+        ========================= */
 
-    .nav-links {
-        position: absolute;
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
 
-        top: 82px;
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
 
-        left: 4%;
-        right: 4%;
+        @keyframes floatSmall {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-        display: none;
+            50% {
+                transform: translateY(-8px);
+            }
+        }
 
-        flex-direction: column;
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
-        background: white;
+        @keyframes marquee {
+            to {
+                transform: translateX(-50%);
+            }
+        }
 
-        padding: 18px;
+        @keyframes pulse {
+            0% {
+                box-shadow:
+                    0 12px 30px rgba(32,180,93,.3),
+                    0 0 0 0 rgba(32,180,93,.25);
+            }
 
-        border: 1px solid var(--border);
+            70% {
+                box-shadow:
+                    0 12px 30px rgba(32,180,93,.3),
+                    0 0 0 10px rgba(32,180,93,0);
+            }
 
-        border-radius: 18px;
+            100% {
+                box-shadow:
+                    0 12px 30px rgba(32,180,93,.3),
+                    0 0 0 0 rgba(32,180,93,0);
+            }
+        }
 
-        box-shadow: var(--shadow);
 
-        gap: 3px;
-    }
+        /* =========================
+           TABLET
+        ========================= */
 
-    .nav-links.open {
-        display: flex;
-    }
+        @media (max-width: 950px) {
 
-    .nav-links a {
-        padding: 11px;
+            .nav-links {
+                position: absolute;
 
-        width: 100%;
-    }
+                top: 82px;
 
-    .nav-links a::after {
-        bottom: 4px;
-    }
+                left: 4%;
+                right: 4%;
 
-    .nav-cta {
-        display: none;
-    }
+                display: none;
 
-    .menu {
-        display: block;
-    }
+                flex-direction: column;
 
+                padding: 18px;
 
-    /* HERO / ABOUT / CONTACT */
+                gap: 3px;
 
-    .hero-grid,
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
+                background: white;
 
-    .hero {
-        text-align: center;
-    }
+                border: 1px solid var(--border);
 
-    .hero-copy > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
+                border-radius: 18px;
 
-    .actions,
-    .hero-contact {
-        justify-content: center;
-    }
+                box-shadow: var(--shadow);
+            }
 
-    .hero-visual {
-        margin-top: 20px;
-    }
+            .nav-links.open {
+                display: flex;
+            }
 
+            .nav-links a {
+                width: 100%;
 
-    /* CARDS */
+                padding: 11px;
+            }
 
-    .cards,
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            .nav-links a::after {
+                bottom: 4px;
+            }
 
+            .nav-cta {
+                display: none;
+            }
 
-    /* PROCESS */
+            .menu {
+                display: block;
+            }
 
-    .process-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .step:nth-child(3)::after,
-    .step:nth-child(5)::after {
-        display: none;
-    }
+            .hero {
+                text-align: center;
+            }
 
+            .hero-copy > p {
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-    /* STATISTICS */
+            .actions,
+            .hero-contact {
+                justify-content: center;
+            }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+            .hero-image-wrap {
+                width: min(600px,92%);
 
-        gap: 35px;
-    }
+                margin: auto;
+            }
 
+            .hero-image {
+                height: 430px;
+            }
 
-    /* FOOTER */
+            .card-top {
+                right: -10px;
+            }
 
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+            .card-bottom {
+                left: -10px;
+            }
 
+            .cards,
+            .project-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
 
-/* ================================
-   MOBILE
-================================ */
+            .process-grid {
+                grid-template-columns: repeat(3,1fr);
+            }
 
-@media (max-width: 620px) {
+            .step:nth-child(3)::after,
+            .step:nth-child(5)::after {
+                display: none;
+            }
 
-    .section {
-        padding: 72px 0;
-    }
+            .stats-grid {
+                grid-template-columns: repeat(2,1fr);
 
+                gap: 35px;
+            }
 
-    /* LOGO */
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
 
-    .logo img {
-        width: 48px;
-        height: 48px;
-    }
 
-    .logo-text {
-        font-size: 1.08rem;
-    }
+        /* =========================
+           MOBILE
+        ========================= */
 
+        @media (max-width: 620px) {
 
-    /* HERO */
+            .section {
+                padding: 72px 0;
+            }
 
-    .hero {
-        padding-top: 105px;
-    }
+            .logo img {
+                width: 45px;
+                height: 45px;
+            }
 
-    .hero h1 {
-        letter-spacing: -1.2px;
-    }
+            .logo-text {
+                font-size: 1.05rem;
+            }
 
-    .hero-card {
-        padding: 25px;
-    }
+            .logo small {
+                font-size: .36rem;
+            }
 
-    .hero-logo {
-        width: 180px;
-    }
+            .hero {
+                padding-top: 105px;
+            }
 
+            .hero h1 {
+                letter-spacing: -1.2px;
+            }
 
-    /* ONE COLUMN */
+            .hero-image-wrap {
+                width: 100%;
 
-    .cards,
-    .project-grid,
-    .process-grid,
-    .stats-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
+                padding: 8px;
+            }
 
+            .hero-image {
+                height: 330px;
 
-    /* ABOUT */
+                border-radius: 24px;
+            }
 
-    .check-grid {
-        grid-template-columns: 1fr;
-    }
+            .hero-image-wrap::before {
+                width: 90px;
+                height: 90px;
 
+                top: -8px;
+                right: -8px;
 
-    /* PROCESS */
+                border-radius: 20px;
+            }
 
-    .step:not(:last-child)::after {
-        display: none;
-    }
+            .hero-image-wrap::after {
+                width: 100px;
+                height: 100px;
 
+                bottom: -15px;
+                left: -15px;
+            }
 
-    /* FORM */
+            .floating-card {
+                padding: 9px 11px;
 
-    form {
-        grid-template-columns: 1fr;
-    }
+                gap: 8px;
+            }
 
-    .field.full {
-        grid-column: auto;
-    }
+            .floating-card strong {
+                font-size: .66rem;
+            }
 
+            .floating-card span {
+                font-size: .55rem;
+            }
 
-    /* CTA */
+            .floating-icon {
+                width: 30px;
+                height: 30px;
 
-    .cta-box {
-        padding: 40px 22px;
-    }
+                font-size: .7rem;
+            }
 
+            .card-top {
+                top: 25px;
 
-    /* ABOUT IMAGE */
+                right: -3px;
+            }
 
-    .about-visual {
-        min-height: 330px;
-    }
+            .card-bottom {
+                bottom: 35px;
 
-    .about-visual img {
-        width: 190px;
-    }
-}
+                left: -3px;
+            }
 
-</style>
+            .image-badge {
+                right: 15px;
+
+                bottom: 10px;
+
+                padding: 7px 10px;
+
+                font-size: .57rem;
+            }
+
+            .cards,
+            .project-grid,
+            .process-grid,
+            .stats-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .check-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step:not(:last-child)::after {
+                display: none;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .field.full {
+                grid-column: auto;
+            }
+
+            .cta-box {
+                padding: 40px 22px;
+            }
+
+            .about-visual {
+                min-height: 330px;
+            }
+
+            .about-visual img {
+                width: 190px;
+            }
+
+            .whatsapp {
+                width: 48px;
+                height: 48px;
+
+                right: 15px;
+                bottom: 15px;
+
+                font-size: 1.25rem;
+            }
+
+            .top {
+                right: 15px;
+
+                bottom: 75px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header id="header">
- <div class="container nav">
- <a href="#home" class="logo"><img src="img/logo.png" alt="WebTechGhar">
- <div>
- <div class="logo-text">WebTech<span>Ghar</span></div>
- <small>THINK DIGITAL • BUILD BETTER</small>
- </div>
- </a>
 
- <nav class="nav-links" id="navLinks">
- <a href="#home">Home</a>
- <a href="#services">Services</a>
- <a href="#about">About</a>
- <a href="#process">Process</a>
- <a href="#projects">Solutions</a>
- <a href="#contact">Contact</a>
- </nav>
+    <div class="container nav">
 
- <a class="nav-cta" href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20website.">Start a Project ↗</a>
- <button class="menu" id="menu" aria-label="Open menu">☰</button>
- </div>
+        <a href="#home" class="logo">
+
+            <img src="img/logo.png" alt="WebTechGhar Logo">
+
+            <div>
+
+                <div class="logo-text">
+                    WebTech<span>Ghar</span>
+                </div>
+
+                <small>
+                    THINK DIGITAL • BUILD BETTER
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#about">About</a>
+
+            <a href="#process">Process</a>
+
+            <a href="#projects">Solutions</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <a
+            class="nav-cta"
+            href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20website."
+        >
+            Start a Project
+            <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+
+
+        <button
+            class="menu"
+            id="menu"
+            aria-label="Open menu"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+
 </header>
 
-<main>
-<section class="hero" id="home">
- <div class="container hero-grid">
- <div class="hero-copy">
- <div class="hero-badge"><span class="dot"></span>Web Development Studio</div>
- <h1>Think Digital.<br><span class="gradient-text">Build Better.</span></h1>
- <p>
- WebTechGhar creates fast, modern and professional digital experiences for businesses,
- startups, professionals and organizations. From your first idea to a fully launched website,
- we handle the technology remotely.
- </p>
- <div class="actions">
- <a class="btn btn-primary" href="#contact">Get a Free Consultation →</a>
- <a class="btn btn-outline" href="#services">Explore Services</a>
- </div>
- <div class="hero-contact">
- <span>☎ <strong>+977 9840976007</strong></span>
- <span>✉ <strong>info@webtechghar.com</strong></span>
- <span>⌖ <strong>Biratnagar, Nepal</strong></span>
- </div>
- </div>
 
- <div class="hero-visual">
- <div class="hero-card"><img src="img/logo.png" alt="WebTechGhar">
- <h3>Digital Solutions, Built for Growth</h3>
- <p>Professional websites • E-commerce • SEO • Maintenance</p>
- <div class="mini-grid">
- <div class="mini"><strong>Responsive</strong><span>Mobile-first design</span></div>
- <div class="mini"><strong>SEO Ready</strong><span>Search-friendly structure</span></div>
- <div class="mini"><strong>Secure</strong><span>Best-practice development</span></div>
- <div class="mini"><strong>Flexible</strong><span>Easy online communication</span></div>
- </div>
- </div>
- </div>
- </div>
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+
+        <div class="hero-copy">
+
+
+            <div class="hero-badge">
+
+                <span class="dot"></span>
+
+                Web Design & Development
+
+            </div>
+
+
+            <h1>
+
+                Websites That
+
+                <span class="gradient-text">
+                    Work for Your Business.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                WebTechGhar designs and develops modern,
+                responsive and performance-focused websites
+                for businesses, professionals, startups and
+                organizations.
+
+            </p>
+
+
+            <div class="actions">
+
+                <a
+                    class="btn btn-primary"
+                    href="#contact"
+                >
+                    Get a Free Consultation
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+
+                <a
+                    class="btn btn-outline"
+                    href="#services"
+                >
+                    Explore Services
+                </a>
+
+            </div>
+
+
+            <div class="hero-contact">
+
+                <span>
+                    <i class="fas fa-phone"></i>
+                    <strong>+977 9840976007</strong>
+                </span>
+
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    <strong>info@webtechghar.com</strong>
+                </span>
+
+                <span>
+                    <i class="fas fa-location-dot"></i>
+                    <strong>Biratnagar, Nepal</strong>
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="hero-visual reveal">
+
+            <div class="hero-image-wrap">
+
+
+                <img
+                    src="img/web-development.png"
+                    alt="Professional web development workspace"
+                    class="hero-image"
+                >
+
+
+                <div class="floating-card card-top">
+
+                    <div class="floating-icon">
+
+                        <i class="fas fa-code"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Clean Code
+                        </strong>
+
+                        <span>
+                            Modern Development
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-bottom">
+
+                    <div class="floating-icon">
+
+                        <i class="fas fa-mobile-screen-button"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            100% Responsive
+                        </strong>
+
+                        <span>
+                            Mobile • Tablet • Desktop
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-badge">
+
+                    <span class="badge-dot"></span>
+
+                    Available for Projects
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
 </section>
+
+
+
+<!-- =========================
+     MARQUEE
+========================= -->
 
 <div class="marquee">
- <div class="marquee-track">
- <span>WEB DESIGN</span><span>WEB DEVELOPMENT</span><span>E-COMMERCE</span>
- <span>SEO</span><span>WEBSITE MAINTENANCE</span><span>UI/UX</span><span>DIGITAL SOLUTIONS</span>
- <span>WEB DESIGN</span><span>WEB DEVELOPMENT</span><span>E-COMMERCE</span>
- <span>SEO</span><span>WEBSITE MAINTENANCE</span><span>UI/UX</span><span>DIGITAL SOLUTIONS</span>
- </div>
+
+    <div class="marquee-track">
+
+        <span>WEB DESIGN</span>
+        <span>WEB DEVELOPMENT</span>
+        <span>E-COMMERCE</span>
+        <span>SEO</span>
+        <span>WEBSITE MAINTENANCE</span>
+        <span>UI/UX</span>
+        <span>DIGITAL SOLUTIONS</span>
+
+        <span>WEB DESIGN</span>
+        <span>WEB DEVELOPMENT</span>
+        <span>E-COMMERCE</span>
+        <span>SEO</span>
+        <span>WEBSITE MAINTENANCE</span>
+        <span>UI/UX</span>
+        <span>DIGITAL SOLUTIONS</span>
+
+    </div>
+
 </div>
 
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
 <section class="section services" id="services">
- <div class="container">
- <div class="section-head reveal">
- <div class="eyebrow">What We Do</div>
- <h2>Everything Your Website Needs</h2>
- <p>Practical, scalable and professional web solutions designed around your business goals—not just a pretty homepage.</p>
- </div>
 
- <div class="cards">
- <article class="card reveal">
- <div class="icon">⌘</div><h3>Website Design</h3>
- <p>Clean, modern and conversion-focused websites that represent your brand professionally.</p>
- <ul><li>Corporate & business sites</li><li>Portfolio & personal sites</li><li>Landing pages</li><li>Responsive UI/UX</li></ul>
- </article>
+    <div class="container">
 
- <article class="card reveal">
- <div class="icon">&lt;/&gt;</div><h3>Web Development</h3>
- <p>Reliable front-end and back-end development with maintainable code and scalable structure.</p>
- <ul><li>HTML, CSS & JavaScript</li><li>PHP & MySQL</li><li>APIs & integrations</li><li>Custom functionality</li></ul>
- </article>
 
- <article class="card reveal">
- <div class="icon">🛒</div><h3>E-Commerce</h3>
- <p>Online stores that make it easy for customers to discover products, order and contact you.</p>
- <ul><li>Product catalogs</li><li>Cart & checkout</li><li>Order systems</li><li>Payment integration</li></ul>
- </article>
+        <div class="section-head reveal">
 
- <article class="card reveal">
- <div class="icon">⌕</div><h3>SEO & Performance</h3>
- <p>Technical foundations that help search engines understand your website and users enjoy fast pages.</p>
- <ul><li>On-page SEO</li><li>Meta & structured data</li><li>Speed optimization</li><li>Sitemap & robots.txt</li></ul>
- </article>
+            <div class="eyebrow">
+                <i class="fas fa-layer-group"></i>
+                What We Do
+            </div>
 
- <article class="card reveal">
- <div class="icon">⚙</div><h3>Maintenance</h3>
- <p>Keep your website updated, secure and functioning correctly after launch.</p>
- <ul><li>Content updates</li><li>Bug fixes</li><li>Backups & security</li><li>Hosting support</li></ul>
- </article>
+            <h2>
+                Everything Your Website Needs
+            </h2>
 
- <article class="card reveal">
- <div class="icon">◈</div><h3>Business Automation</h3>
- <p>Turn repetitive website tasks into simple digital workflows that save time.</p>
- <ul><li>Contact forms</li><li>Quotation requests</li><li>Email notifications</li><li>Admin dashboards</li></ul>
- </article>
- </div>
- </div>
-</section>
+            <p>
+                Practical, scalable and professional web
+                solutions designed around your business goals.
+            </p>
 
-<section class="section" id="about">
- <div class="container about-grid">
- <div class="about-visual reveal">
- <img src="img/logo.png" alt="WebTechGhar">
- <div class="remote-tag">Based in Nepal • Professional Digital Service</div>
- </div>
-
- <div class="about-copy reveal">
- <div class="eyebrow">About Us</div>
- <h2>A Digital Partner, Not Just a Developer</h2>
- <p>
- WebTechGhar is a remote web development and digital solutions brand focused on helping
- businesses build a stronger online presence. We combine design, development, performance,
- SEO and practical business thinking into one streamlined service.
- </p>
- <p>
- </p>
-
- <div class="check-grid">
- <div class="check"><b>✓</b> Mobile-first websites</div>
- <div class="check"><b>✓</b> Professional UI/UX</div>
- <div class="check"><b>✓</b> Clean & maintainable code</div>
- <div class="check"><b>✓</b> SEO-ready structure</div>
- <div class="check"><b>✓</b> Performance focused</div>
- <div class="check"><b>✓</b> Ongoing support</div>
- </div>
-
- <a class="btn btn-primary" href="#contact">Discuss Your Website →</a>
- </div>
- </div>
-</section>
-
-<section class="section process" id="process">
- <div class="container">
- <div class="section-head reveal">
- <div class="eyebrow">Our Workflow</div>
- <h2>From Idea to Launch</h2>
- <p>A clear process keeps your project organized, transparent and focused on business results.</p>
- </div>
-
- <div class="process-grid">
- <div class="step reveal"><div class="step-number">01</div><h3>Discover</h3><p>Understand your business, audience, goals and required features.</p></div>
- <div class="step reveal"><div class="step-number">02</div><h3>Plan</h3><p>Define sitemap, content structure, technology and project scope.</p></div>
- <div class="step reveal"><div class="step-number">03</div><h3>Design</h3><p>Create a modern visual direction and responsive user experience.</p></div>
- <div class="step reveal"><div class="step-number">04</div><h3>Develop</h3><p>Build, test and optimize the website across devices and browsers.</p></div>
- <div class="step reveal"><div class="step-number">05</div><h3>Launch</h3><p>Deploy, configure domain/hosting and provide post-launch support.</p></div>
- </div>
- </div>
-</section>
-
-<section class="section">
- <div class="container">
- <div class="section-head reveal">
- <div class="eyebrow">Technology</div>
- <h2>Tools We Work With</h2>
- <p>Technology is selected according to the project—not forced into every website.</p>
- </div>
- <div class="tech-grid reveal">
- <span class="tech">HTML5</span><span class="tech">CSS3</span><span class="tech">JavaScript</span>
- <span class="tech">PHP</span><span class="tech">MySQL</span><span class="tech">WordPress</span>
- <span class="tech">Git / GitHub</span><span class="tech">cPanel</span><span class="tech">REST APIs</span>
- <span class="tech">Responsive Design</span><span class="tech">Technical SEO</span><span class="tech">Google Analytics</span>
- </div>
- </div>
-</section>
-
-<section class="section stats">
-    <div class="container stats-grid">
-
-        <div class="stat reveal">
-            <strong data-count="2" class="plus">0</strong>
-            <span>Years Experience</span>
         </div>
 
-        <div class="stat reveal">
-            <strong data-count="19" class="plus">0</strong>
-            <span>Projects Completed</span>
-        </div>
 
-        <div class="stat reveal">
-            <strong data-count="19" class="plus">0</strong>
-            <span>Satisfied Clients</span>
-        </div>
 
-        <div class="stat reveal">
-            <strong data-count="100">0</strong>
-            <span>Responsive Design</span>
+        <div class="cards">
+
+
+            <article class="card reveal">
+
+                <div class="icon">
+                    <i class="fas fa-paintbrush"></i>
+                </div>
+
+                <h3>
+                    Website Design
+                </h3>
+
+                <p>
+                    Clean, modern and conversion-focused
+                    websites that represent your brand professionally.
+                </p>
+
+                <ul>
+                    <li>Corporate websites</li>
+                    <li>Portfolio websites</li>
+                    <li>Landing pages</li>
+                    <li>Responsive UI/UX</li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="card reveal">
+
+                <div class="icon">
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Reliable front-end and back-end development
+                    with clean and maintainable code.
+                </p>
+
+                <ul>
+                    <li>HTML, CSS & JavaScript</li>
+                    <li>PHP & MySQL</li>
+                    <li>APIs & integrations</li>
+                    <li>Custom functionality</li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="card reveal">
+
+                <div class="icon">
+                    <i class="fas fa-cart-shopping"></i>
+                </div>
+
+                <h3>
+                    E-Commerce
+                </h3>
+
+                <p>
+                    Product-focused online stores designed to
+                    help customers browse and order easily.
+                </p>
+
+                <ul>
+                    <li>Product catalogs</li>
+                    <li>Shopping cart</li>
+                    <li>Order systems</li>
+                    <li>Payment integration</li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="card reveal">
+
+                <div class="icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <h3>
+                    SEO & Performance
+                </h3>
+
+                <p>
+                    Technical foundations that improve search
+                    visibility and website performance.
+                </p>
+
+                <ul>
+                    <li>On-page SEO</li>
+                    <li>Meta optimization</li>
+                    <li>Speed optimization</li>
+                    <li>Sitemap & robots.txt</li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="card reveal">
+
+                <div class="icon">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                </div>
+
+                <h3>
+                    Website Maintenance
+                </h3>
+
+                <p>
+                    Keep your website updated, secure and
+                    functioning correctly after launch.
+                </p>
+
+                <ul>
+                    <li>Content updates</li>
+                    <li>Bug fixes</li>
+                    <li>Backups & security</li>
+                    <li>Hosting support</li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="card reveal">
+
+                <div class="icon">
+                    <i class="fas fa-gears"></i>
+                </div>
+
+                <h3>
+                    Business Automation
+                </h3>
+
+                <p>
+                    Turn repetitive website tasks into simple
+                    digital workflows that save time.
+                </p>
+
+                <ul>
+                    <li>Contact forms</li>
+                    <li>Quotation requests</li>
+                    <li>Email notifications</li>
+                    <li>Admin dashboards</li>
+                </ul>
+
+            </article>
+
+
         </div>
 
     </div>
+
 </section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about-visual reveal">
+
+            <img
+                src="img/logo.png"
+                alt="WebTechGhar"
+            >
+
+            <div class="remote-tag">
+                Based in Nepal • Professional Digital Service
+            </div>
+
+        </div>
+
+
+        <div class="about-copy reveal">
+
+            <div class="eyebrow">
+                <i class="fas fa-building"></i>
+                About WebTechGhar
+            </div>
+
+            <h2>
+                A Digital Partner,
+                Not Just a Developer
+            </h2>
+
+            <p>
+                WebTechGhar is a web development and digital
+                solutions brand focused on helping businesses
+                build a stronger online presence.
+            </p>
+
+            <p>
+                We combine design, development, performance,
+                SEO and practical business thinking into one
+                streamlined service.
+            </p>
+
+
+            <div class="check-grid">
+
+                <div class="check">
+                    <b>✓</b>
+                    Mobile-first websites
+                </div>
+
+                <div class="check">
+                    <b>✓</b>
+                    Professional UI/UX
+                </div>
+
+                <div class="check">
+                    <b>✓</b>
+                    Clean code
+                </div>
+
+                <div class="check">
+                    <b>✓</b>
+                    SEO-ready structure
+                </div>
+
+                <div class="check">
+                    <b>✓</b>
+                    Performance focused
+                </div>
+
+                <div class="check">
+                    <b>✓</b>
+                    Ongoing support
+                </div>
+
+            </div>
+
+
+            <a
+                class="btn btn-primary"
+                href="#contact"
+            >
+                Discuss Your Website
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section class="section process" id="process">
+
+    <div class="container">
+
+
+        <div class="section-head reveal">
+
+            <div class="eyebrow">
+                <i class="fas fa-route"></i>
+                Our Workflow
+            </div>
+
+            <h2>
+                From Idea to Launch
+            </h2>
+
+            <p>
+                A clear process keeps your project organized,
+                transparent and focused on results.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="step reveal">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+                    Understand your business,
+                    audience and goals.
+                </p>
+
+            </div>
+
+
+            <div class="step reveal">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Plan
+                </h3>
+
+                <p>
+                    Define sitemap, content,
+                    technology and scope.
+                </p>
+
+            </div>
+
+
+            <div class="step reveal">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Design
+                </h3>
+
+                <p>
+                    Create a modern visual
+                    direction and UX.
+                </p>
+
+            </div>
+
+
+            <div class="step reveal">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Develop
+                </h3>
+
+                <p>
+                    Build, test and optimize
+                    across devices.
+                </p>
+
+            </div>
+
+
+            <div class="step reveal">
+
+                <div class="step-number">
+                    05
+                </div>
+
+                <h3>
+                    Launch
+                </h3>
+
+                <p>
+                    Deploy and provide
+                    post-launch support.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TECHNOLOGY
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-head reveal">
+
+            <div class="eyebrow">
+                <i class="fas fa-microchip"></i>
+                Technology
+            </div>
+
+            <h2>
+                Tools We Work With
+            </h2>
+
+            <p>
+                Technology is selected according to the
+                requirements of each project.
+            </p>
+
+        </div>
+
+
+        <div class="tech-grid reveal">
+
+            <span class="tech">HTML5</span>
+
+            <span class="tech">CSS3</span>
+
+            <span class="tech">JavaScript</span>
+
+            <span class="tech">PHP</span>
+
+            <span class="tech">MySQL</span>
+
+            <span class="tech">WordPress</span>
+
+            <span class="tech">Git / GitHub</span>
+
+            <span class="tech">cPanel</span>
+
+            <span class="tech">REST APIs</span>
+
+            <span class="tech">Responsive Design</span>
+
+            <span class="tech">Technical SEO</span>
+
+            <span class="tech">Google Analytics</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STATISTICS
+========================= -->
+
+<section class="section stats">
+
+    <div class="container stats-grid">
+
+
+        <div class="stat reveal">
+
+            <strong
+                data-count="2"
+                class="plus"
+            >
+                0
+            </strong>
+
+            <span>
+                Years Experience
+            </span>
+
+        </div>
+
+
+        <div class="stat reveal">
+
+            <strong
+                data-count="19"
+                class="plus"
+            >
+                0
+            </strong>
+
+            <span>
+                Projects Completed
+            </span>
+
+        </div>
+
+
+        <div class="stat reveal">
+
+            <strong
+                data-count="19"
+                class="plus"
+            >
+                0
+            </strong>
+
+            <span>
+                Satisfied Clients
+            </span>
+
+        </div>
+
+
+        <div class="stat reveal">
+
+            <strong data-count="100">
+                0
+            </strong>
+
+            <span>
+                Responsive Design
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOLUTIONS
+========================= -->
 
 <section class="section projects" id="projects">
- <div class="container">
- <div class="section-head reveal">
- <div class="eyebrow">Solutions</div>
- <h2>Websites We Can Build</h2>
- <p>Whether you are starting from zero or improving an existing website, we can shape the right solution.</p>
- </div>
 
- <div class="project-grid">
- <article class="project reveal"><div class="project-label">Business</div><h3>Corporate Websites</h3><p>Professional websites for companies, agencies, service providers and local businesses.</p><span class="tagline">Trust • Brand • Leads</span></article>
- <article class="project reveal"><div class="project-label">Commerce</div><h3>Online Stores</h3><p>Product-focused e-commerce experiences with catalog, cart, order and inquiry functionality.</p><span class="tagline">Products • Orders • Growth</span></article>
- <article class="project reveal"><div class="project-label">Personal</div><h3>Portfolio Websites</h3><p>Personal brands, CV websites, freelancer profiles and creative portfolios.</p><span class="tagline">Profile • Work • Contact</span></article>
- <article class="project reveal"><div class="project-label">Marketing</div><h3>Landing Pages</h3><p>Focused pages designed around a campaign, product, service, promotion or lead-generation goal.</p><span class="tagline">Focus • Conversion • CTA</span></article>
- <article class="project reveal"><div class="project-label">Organization</div><h3>Information Portals</h3><p>Structured websites for schools, organizations, communities and information-heavy projects.</p><span class="tagline">Content • Structure • Access</span></article>
- <article class="project reveal"><div class="project-label">Custom</div><h3>Web Applications</h3><p>Custom dashboards, forms, databases and browser-based tools for specific business workflows.</p><span class="tagline">Logic • Data • Automation</span></article>
- </div>
- </div>
+    <div class="container">
+
+
+        <div class="section-head reveal">
+
+            <div class="eyebrow">
+                <i class="fas fa-cubes"></i>
+                Solutions
+            </div>
+
+            <h2>
+                Websites We Can Build
+            </h2>
+
+            <p>
+                From simple business websites to custom
+                web applications, we build solutions around
+                your requirements.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <article class="project reveal">
+
+                <div class="project-label">
+                    Business
+                </div>
+
+                <h3>
+                    Corporate Websites
+                </h3>
+
+                <p>
+                    Professional websites for companies,
+                    agencies, service providers and businesses.
+                </p>
+
+                <span class="tagline">
+                    Trust • Brand • Leads
+                </span>
+
+            </article>
+
+
+            <article class="project reveal">
+
+                <div class="project-label">
+                    Commerce
+                </div>
+
+                <h3>
+                    Online Stores
+                </h3>
+
+                <p>
+                    Product-focused e-commerce websites with
+                    catalogs, orders and inquiry functionality.
+                </p>
+
+                <span class="tagline">
+                    Products • Orders • Growth
+                </span>
+
+            </article>
+
+
+            <article class="project reveal">
+
+                <div class="project-label">
+                    Personal
+                </div>
+
+                <h3>
+                    Portfolio Websites
+                </h3>
+
+                <p>
+                    Personal brands, CV websites, freelancer
+                    profiles and professional portfolios.
+                </p>
+
+                <span class="tagline">
+                    Profile • Work • Contact
+                </span>
+
+            </article>
+
+
+            <article class="project reveal">
+
+                <div class="project-label">
+                    Marketing
+                </div>
+
+                <h3>
+                    Landing Pages
+                </h3>
+
+                <p>
+                    Focused pages designed around campaigns,
+                    products, services and lead generation.
+                </p>
+
+                <span class="tagline">
+                    Focus • Conversion • CTA
+                </span>
+
+            </article>
+
+
+            <article class="project reveal">
+
+                <div class="project-label">
+                    Organization
+                </div>
+
+                <h3>
+                    Information Portals
+                </h3>
+
+                <p>
+                    Structured websites for schools,
+                    organizations and information-heavy projects.
+                </p>
+
+                <span class="tagline">
+                    Content • Structure • Access
+                </span>
+
+            </article>
+
+
+            <article class="project reveal">
+
+                <div class="project-label">
+                    Custom
+                </div>
+
+                <h3>
+                    Web Applications
+                </h3>
+
+                <p>
+                    Custom dashboards, databases, forms and
+                    browser-based business tools.
+                </p>
+
+                <span class="tagline">
+                    Logic • Data • Automation
+                </span>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
 </section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
- <div class="container">
- <div class="cta-box reveal">
- <h2>Have an idea for a website?</h2>
- <p>Tell us what you need. We can discuss the scope, features, estimated timeline and the best technology for your project.</p>
- <div class="actions" style="justify-content:center">
- <a class="btn btn-primary" href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20want%20to%20discuss%20a%20website%20project.">Chat on WhatsApp</a>
- <a class="btn btn-outline" href="mailto:info@webtechghar.com">Send an Email</a>
- </div>
- </div>
- </div>
+
+    <div class="container">
+
+        <div class="cta-box reveal">
+
+            <h2>
+                Have an Idea for a Website?
+            </h2>
+
+            <p>
+                Tell us what you need. We can discuss the
+                scope, features, estimated timeline and the
+                best technology for your project.
+            </p>
+
+
+            <div
+                class="actions"
+                style="justify-content:center"
+            >
+
+                <a
+                    class="btn btn-primary"
+                    href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20want%20to%20discuss%20a%20website%20project."
+                >
+                    <i class="fab fa-whatsapp"></i>
+                    Chat on WhatsApp
+                </a>
+
+
+                <a
+                    class="btn btn-outline"
+                    href="mailto:info@webtechghar.com"
+                >
+                    <i class="fas fa-envelope"></i>
+                    Send an Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section contact" id="contact">
- <div class="container">
- <div class="section-head reveal">
- <div class="eyebrow">Contact</div>
- <h2>Let's Build Something Better</h2>
- <p>Send your requirements and we will get back to you.</p>
- </div>
 
- <div class="contact-grid">
- <div class="contact-info reveal">
- <h3>WebTechGhar</h3>
- <p>Professional web development and digital solutions for modern businesses.</p>
+    <div class="container">
 
- <div class="contact-item">
- <div class="contact-icon">☎</div>
- <div><strong>Phone / WhatsApp</strong><a href="tel:+9779840976007">+977 9840976007</a></div>
- </div>
 
- <div class="contact-item">
- <div class="contact-icon">✉</div>
- <div><strong>Email</strong><a href="mailto:info@webtechghar.com">info@webtechghar.com</a></div>
- </div>
+        <div class="section-head reveal">
 
- <div class="contact-item">
- <div class="contact-icon">⌖</div>
- <div><strong>Location</strong><span>Biratnagar, Nepal</span></div>
- </div>
+            <div class="eyebrow">
+                <i class="fas fa-paper-plane"></i>
+                Contact
+            </div>
 
- <div class="contact-item">
- <div class="contact-icon">↗</div>
- <div><strong>Service Model</strong><span>Online consultation & professional support</span></div>
- </div>
- </div>
+            <h2>
+                Let's Build Something Better
+            </h2>
 
- <div class="contact-form reveal">
- <form id="contactForm">
- <div class="field">
- <label for="name">YOUR NAME</label>
- <input id="name" name="name" type="text" placeholder="Enter Your Full Name" required>
- </div>
- <div class="field">
- <label for="email">EMAIL</label>
- <input id="email" name="email" type="email" placeholder="you@example.com" required>
- </div>
- <div class="field">
- <label for="phone">PHONE / WHATSAPP</label>
- <input id="phone" name="phone" type="tel" placeholder="Phone Number">
- </div>
- <div class="field">
- <label for="service">SERVICE</label>
- <select id="service" name="service">
- <option>Website Design</option>
- <option>Web Development</option>
- <option>E-Commerce</option>
- <option>SEO & Performance</option>
- <option>Website Maintenance</option>
- <option>Custom Web Application</option>
- <option>Not Sure Yet</option>
- </select>
- </div>
- <div class="field full">
- <label for="message">PROJECT DETAILS</label>
- <textarea id="message" name="message" placeholder="Tell us about your business, website requirements, pages, features or budget range..." required></textarea>
- </div>
- <div class="field full">
- <button class="btn btn-primary" type="submit">Send Project Inquiry →</button>
- <!-- <div class="form-note">For server-side submissions, connect it to PHP, Formspree, or your preferred email API.</div>-->
- </div>
- </form>
- </div>
- </div>
- </div>
+            <p>
+                Send your requirements and start a conversation
+                about your website project.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info reveal">
+
+                <h3>
+                    WebTechGhar
+                </h3>
+
+                <p>
+                    Professional web development and digital
+                    solutions for modern businesses.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Phone / WhatsApp
+                        </strong>
+
+                        <a href="tel:+9779840976007">
+                            +977 9840976007
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <a href="mailto:info@webtechghar.com">
+                            info@webtechghar.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Biratnagar, Nepal
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Services
+                        </strong>
+
+                        <span>
+                            Web Design • Development • SEO
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-form reveal">
+
+                <form id="contactForm">
+
+
+                    <div class="field">
+
+                        <label for="name">
+                            YOUR NAME
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            EMAIL
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="phone">
+                            PHONE / WHATSAPP
+                        </label>
+
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="+977..."
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="service">
+                            SERVICE
+                        </label>
+
+                        <select id="service" name="service">
+
+                            <option>
+                                Website Design
+                            </option>
+
+                            <option>
+                                Web Development
+                            </option>
+
+                            <option>
+                                E-Commerce
+                            </option>
+
+                            <option>
+                                SEO & Performance
+                            </option>
+
+                            <option>
+                                Website Maintenance
+                            </option>
+
+                            <option>
+                                Custom Web Application
+                            </option>
+
+                            <option>
+                                Not Sure Yet
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label for="message">
+                            PROJECT DETAILS
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us about your business, website requirements, pages, features or budget..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <button
+                            class="btn btn-primary"
+                            type="submit"
+                        >
+                            Send Project Inquiry
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
- <div class="container">
- <div class="footer-grid">
- <div class="footer-brand">
- <img src="img/footer.png" alt="WebTechGhar">
- <h3>WebTechGhar</h3>
- <p>Think Digital • Build Better. Professional web development and digital solutions delivered remotely from Nepal.</p>
- </div>
- <div>
- <h3>Services</h3>
- <ul>
- <li><a href="#services">Website Design</a></li>
- <li><a href="#services">Web Development</a></li>
- <li><a href="#services">E-Commerce</a></li>
- <li><a href="#services">SEO & Performance</a></li>
- <li><a href="#services">Maintenance</a></li>
- </ul>
- </div>
- <div>
- <h3>Quick Contact</h3>
- <ul>
- <li><a href="tel:+9779840976007">+977 9840976007</a></li>
- <li><a href="mailto:info@webtechghar.com">info@webtechghar.com</a></li>
- <li>Biratnagar, Nepal</li>
- <li>Professional Web Services</li>
- </ul>
- </div>
- </div>
- <div class="footer-bottom">
- © <span id="year"></span> WebTechGhar. All rights reserved.
- </div>
- </div>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="img/footer.png"
+                    alt="WebTechGhar"
+                >
+
+                <h3>
+                    WebTechGhar
+                </h3>
+
+                <p>
+                    Think Digital • Build Better.
+                    Professional web development and
+                    digital solutions from Nepal.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Services
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#services">
+                            Website Design
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Web Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            E-Commerce
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            SEO & Performance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Maintenance
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Contact
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="tel:+9779840976007">
+                            +977 9840976007
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@webtechghar.com">
+                            info@webtechghar.com
+                        </a>
+                    </li>
+
+                    <li>
+                        Biratnagar, Nepal
+                    </li>
+
+                    <li>
+                        Professional Web Services
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © <span id="year"></span>
+            WebTechGhar. All rights reserved.
+
+        </div>
+
+
+    </div>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20web%20development%20service." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<a class="top" id="top" href="#home" aria-label="Back to top">↑</a>
+
+
+<!-- =========================
+     FLOATING BUTTONS
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20web%20development%20service."
+    aria-label="Chat with WebTechGhar on WhatsApp"
+>
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<a
+    class="top"
+    id="top"
+    href="#home"
+    aria-label="Back to top"
+>
+
+    <i class="fas fa-arrow-up"></i>
+
+</a>
+
+
 
 <script>
-const header = document.getElementById('header');
-const topBtn = document.getElementById('top');
-const menu = document.getElementById('menu');
-const navLinks = document.getElementById('navLinks');
 
-window.addEventListener('scroll', () => {
- header.classList.toggle('scrolled', window.scrollY > 20);
- topBtn.classList.toggle('show', window.scrollY > 500);
-});
+    /* =========================
+       HEADER
+    ========================= */
 
-menu.addEventListener('click', () => navLinks.classList.toggle('open'));
+    const header =
+        document.getElementById("header");
 
-document.querySelectorAll('.nav-links a').forEach(link => {
- link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+    const topBtn =
+        document.getElementById("top");
 
-/* Scroll reveal */
-const observer = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if(entry.isIntersecting){
- entry.target.classList.add('active');
- observer.unobserve(entry.target);
- }
- });
-},{threshold:.12});
+    const menu =
+        document.getElementById("menu");
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const navLinks =
+        document.getElementById("navLinks");
 
-/* Animated statistics */
-const counters = document.querySelectorAll('[data-count]');
-const counterObserver = new IntersectionObserver((entries, obs) => {
- entries.forEach(entry => {
- if(!entry.isIntersecting) return;
- const el = entry.target;
- const target = Number(el.dataset.count);
- let current = 0;
- const step = Math.max(1, Math.ceil(target / 35));
- const timer = setInterval(() => {
- current += step;
- if(current >= target){
- current = target;
- clearInterval(timer);
- }
- el.textContent = current;
- },35);
- obs.unobserve(el);
- });
-},{threshold:.7});
 
-counters.forEach(el => counterObserver.observe(el));
+    window.addEventListener("scroll", () => {
 
-/* Contact form -> email client */
-document.getElementById('contactForm').addEventListener('submit', function(e){
- e.preventDefault();
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 20
+        );
 
- const name = document.getElementById('name').value.trim();
- const email = document.getElementById('email').value.trim();
- const phone = document.getElementById('phone').value.trim();
- const service = document.getElementById('service').value;
- const message = document.getElementById('message').value.trim();
+        topBtn.classList.toggle(
+            "show",
+            window.scrollY > 500
+        );
 
- const subject = encodeURIComponent('New WebTechGhar Project Inquiry - ' + service);
- const body = encodeURIComponent(
+    });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    menu.addEventListener("click", () => {
+
+        navLinks.classList.toggle("open");
+
+    });
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("open");
+
+            });
+
+        });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const observer =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "active"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: .12
+            }
+
+        );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(el => {
+
+            observer.observe(el);
+
+        });
+
+
+    /* =========================
+       COUNTERS
+    ========================= */
+
+    const counters =
+        document.querySelectorAll(
+            "[data-count]"
+        );
+
+
+    const counterObserver =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (!entry.isIntersecting)
+                        return;
+
+
+                    const el =
+                        entry.target;
+
+                    const target =
+                        Number(
+                            el.dataset.count
+                        );
+
+                    let current = 0;
+
+
+                    const step =
+                        Math.max(
+                            1,
+                            Math.ceil(
+                                target / 35
+                            )
+                        );
+
+
+                    const timer =
+                        setInterval(() => {
+
+                            current += step;
+
+
+                            if (
+                                current >=
+                                target
+                            ) {
+
+                                current =
+                                    target;
+
+                                clearInterval(
+                                    timer
+                                );
+
+                            }
+
+
+                            el.textContent =
+                                current;
+
+                        }, 35);
+
+
+                    counterObserver.unobserve(
+                        el
+                    );
+
+                });
+
+            },
+
+            {
+                threshold: .7
+            }
+
+        );
+
+
+    counters.forEach(el => {
+
+        counterObserver.observe(el);
+
+    });
+
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener(
+            "submit",
+            function(e) {
+
+                e.preventDefault();
+
+
+                const name =
+                    document
+                        .getElementById("name")
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+
+                const phone =
+                    document
+                        .getElementById("phone")
+                        .value
+                        .trim();
+
+
+                const service =
+                    document
+                        .getElementById("service")
+                        .value;
+
+
+                const message =
+                    document
+                        .getElementById("message")
+                        .value
+                        .trim();
+
+
+                const subject =
+                    encodeURIComponent(
+                        "New WebTechGhar Project Inquiry - "
+                        + service
+                    );
+
+
+                const body =
+                    encodeURIComponent(
+
 `Hello WebTechGhar,
 
-I would like to discuss a project.
+I would like to discuss a website project.
 
 Name: ${name}
 Email: ${email}
@@ -2309,13 +3696,28 @@ Project Details:
 ${message}
 
 Thank you.`
- );
+                    );
 
- window.location.href = `mailto:info@webtechghar.com?subject=${subject}&body=${body}`;
-});
 
-document.getElementById('year').textContent = new Date().getFullYear();
+                window.location.href =
+                    `mailto:info@webtechghar.com?subject=${subject}&body=${body}`;
+
+            }
+        );
+
+
+    /* =========================
+       YEAR
+    ========================= */
+
+    document
+        .getElementById("year")
+        .textContent =
+        new Date().getFullYear();
+
 </script>
 
+
 </body>
+
 </html>
