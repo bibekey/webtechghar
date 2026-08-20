@@ -1219,6 +1219,47 @@ header.scrolled {
     background: #f2f5f7;
 }
 
+.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    font-size: 17px;
+
+    animation: whatsappPulse 2s infinite;
+    transition: 0.3s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@media (max-width: 600px) {
+    .whatsapp {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
 
 /* ================================
    CONTACT SECTION
@@ -2022,12 +2063,29 @@ footer a:hover {
 </section>
 
 <section class="section stats">
- <div class="container stats-grid">
- <div class="stat reveal"><strong data-count="100">0</strong><span>% Professional Workflow</span></div>
- <div class="stat reveal"><strong data-count="24">0</strong><span>/7 Online Inquiry</span></div>
- <div class="stat reveal"><strong data-count="100">0</strong><span>% Responsive Focus</span></div>
- <div class="stat reveal"><strong data-count="1">0</strong><span>Dedicated Digital Partner</span></div>
- </div>
+    <div class="container stats-grid">
+
+        <div class="stat reveal">
+            <strong data-count="2" class="plus">0</strong>
+            <span>Years Experience</span>
+        </div>
+
+        <div class="stat reveal">
+            <strong data-count="19" class="plus">0</strong>
+            <span>Projects Completed</span>
+        </div>
+
+        <div class="stat reveal">
+            <strong data-count="19" class="plus">0</strong>
+            <span>Satisfied Clients</span>
+        </div>
+
+        <div class="stat reveal">
+            <strong data-count="100">0</strong>
+            <span>Responsive Design</span>
+        </div>
+
+    </div>
 </section>
 
 <section class="section projects" id="projects">
@@ -2171,7 +2229,7 @@ footer a:hover {
  </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20web%20development%20service." aria-label="WhatsApp">◉</a>
+<a class="whatsapp" href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20web%20development%20service." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <a class="top" id="top" href="#home" aria-label="Back to top">↑</a>
 
 <script>
