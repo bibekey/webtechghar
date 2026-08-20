@@ -1867,45 +1867,59 @@ select:focus-visible,
            MOBILE
         ========================= */
 
-        @media (max-width: 620px) {
+@media (max-width: 620px) {
 
-            .section {
-                padding: 72px 0;
-            }
+    .section {
+        padding: 72px 0;
+    }
 
-            .logo img {
-                width: 45px;
-                height: 45px;
-            }
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
 
-            .logo-text {
-                font-size: 1.05rem;
-            }
+    .logo-text {
+        font-size: 1.05rem;
+    }
 
-            .logo small {
-                font-size: .36rem;
-            }
+    .logo small {
+        font-size: .36rem;
+    }
 
-            .hero {
-                padding-top: 105px;
-            }
+    .hero {
+        padding-top: 105px;
+    }
 
-            .hero h1 {
-                font-size: 2.05rem;
-                letter-spacing: -1.2px;
-            }
+    .hero h1 {
+        font-size: 2.05rem;
+        letter-spacing: -1.2px;
+    }
 
-            .hero-image-wrap {
-                width: 100%;
+    /* HERO BUTTONS */
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
 
-                padding: 8px;
-            }
+    .actions .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 
-            .hero-image {
-                height: 330px;
+    .hero-image-wrap {
+        width: 100%;
+        padding: 8px;
+    }
 
-                border-radius: 24px;
-            }
+    .hero-image {
+        height: 330px;
+        border-radius: 24px;
+    }
+
+    /* REST OF YOUR MOBILE CSS... */
+}
 
             .hero-image-wrap::before {
                 width: 90px;
