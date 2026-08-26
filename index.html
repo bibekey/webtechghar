@@ -1428,6 +1428,74 @@ select:focus-visible,
         }
 
 
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq {
+    background: var(--light-bg);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.faq-question i {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.3s ease,
+        padding 0.3s ease;
+
+    padding: 0 25px;
+    color: var(--gray);
+    font-size: 0.92rem;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 25px 20px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+
         /* =========================
            CONTACT
         ========================= */
@@ -2139,7 +2207,7 @@ select:focus-visible,
 
             <a href="#process">Process</a>
 
-            <a href="#pricing">Pricing</a>
+            <a href="pricing.html">Pricing</a>
 
             <a href="#contact">Contact</a>
 
@@ -3385,6 +3453,92 @@ select:focus-visible,
 
 
 
+<!-- FAQ SECTION -->
+<section class="section faq" id="faq">
+    <div class="container">
+
+        <div class="section-head">
+            <span class="eyebrow">
+                <i class="fa-solid fa-circle-question"></i> FAQ
+            </span>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>
+                Everything you need to know about our web design services
+                and project workflows.
+            </p>
+        </div>
+
+        <div class="faq-accordion">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long does it take to complete a website?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Standard business websites are delivered within
+                        7 to 14 days. Complex e-commerce stores or custom
+                        web applications typically require 3 to 5 weeks
+                        depending on requirements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Will my website work well on mobile phones?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes. Every website we build is fully responsive,
+                        engineered to render flawlessly across all desktop
+                        monitors, tablets, and mobile devices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer domain registration and cloud hosting?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes, we assist with domain setup, SSL security
+                        certificate activation, and high-speed cloud server
+                        configuration for seamless site performance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I update website content myself after launch?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Absolutely. We build user-friendly content
+                        administrative dashboards allowing you to update
+                        text, upload images, and manage store products
+                        without needing code knowledge.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <!-- =========================
      CONTACT
 ========================= -->
@@ -3996,6 +4150,26 @@ select:focus-visible,
 
         counterObserver.observe(el);
 
+    });
+
+
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector(".faq-question");
+
+        questionBtn.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+
+            faqItems.forEach(i => {
+                i.classList.remove("active");
+            });
+
+            if (!isActive) {
+                item.classList.add("active");
+            }
+        });
     });
 
 
