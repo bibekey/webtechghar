@@ -578,10 +578,14 @@ select:focus-visible,
         }
 
 
+        /* HERO ACTIONS */
+
         .actions {
             display: flex;
+
             flex-wrap: wrap;
-            gap: 15px;
+
+            gap: 13px;
         }
 
 
@@ -1941,6 +1945,7 @@ select:focus-visible,
                 margin-right: auto;
             }
 
+            .actions,
             .hero-contact {
                 justify-content: center;
             }
@@ -2019,6 +2024,19 @@ select:focus-visible,
             .hero h1 {
                 font-size: 2.05rem;
                 letter-spacing: -1.2px;
+            }
+
+            /* HERO BUTTONS */
+            .actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 12px;
+            }
+
+            .actions .btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
             }
 
             .hero-image-wrap {
