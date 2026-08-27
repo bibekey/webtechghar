@@ -804,124 +804,155 @@
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+/* ==================================================
+   FOOTER
+================================================== */
 
-        footer{
-            padding:60px 0 25px;
+footer{
+    padding:65px 0 25px;
+    background:#0b2438;
+    color:white;
+}
 
-            background:#0b2438;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr .8fr .9fr 1fr;
+    gap:45px;
+}
 
-            color:white;
-        }
+.footer-brand img{
+    width:82px;
+    margin-bottom:13px;
+}
 
+.footer-brand h3,
+.footer-column h3{
+    font-family:Poppins,sans-serif;
+    font-size:1rem;
+    margin-bottom:15px;
+}
 
-        .footer-grid{
-            display:grid;
+.footer-brand p{
+    max-width:350px;
+    color:#aab9c5;
+    font-size:.8rem;
+    line-height:1.7;
+}
 
-            grid-template-columns:
-                1.4fr .8fr .9fr;
+.footer-column ul{
+    list-style:none;
+}
 
-            gap:45px;
-        }
+.footer-column li{
+    margin:9px 0;
+    color:#aab9c5;
+    font-size:.78rem;
+}
 
+.footer-column a{
+    color:#aab9c5;
+    transition:.2s;
+}
 
-        .footer-brand img{
-            width:78px;
+.footer-column a:hover{
+    color:white;
+}
 
-            margin-bottom:12px;
-        }
+.footer-column li a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
+.footer-column li a i{
+    color:var(--copper);
+    font-size:.62rem;
+}
 
-        .footer-brand h3,
-        .footer-column h3{
-            font-family:Poppins,sans-serif;
+.footer-contact li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+}
 
-            font-size:1rem;
+.footer-contact li > i{
+    width:32px;
+    height:32px;
+    flex-shrink:0;
+    display:grid;
+    place-items:center;
+    border-radius:8px;
+    background:rgba(255,255,255,.07);
+    color:var(--light-copper);
+}
 
-            margin-bottom:13px;
-        }
+.footer-contact li div{
+    display:flex;
+    flex-direction:column;
+}
 
+.footer-contact li span{
+    color:#718696;
+    font-size:.65rem;
+}
 
-        .footer-brand p{
-            max-width:390px;
+.footer-contact li a,
+.footer-contact li strong{
+    font-size:.75rem;
+    color:#d4dde3;
+}
 
-            color:#aab9c5;
+.footer-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#718696;
+    font-size:.68rem;
+}
 
-            font-size:.8rem;
-        }
-
-
-        .footer-column ul{
-            list-style:none;
-        }
-
-
-        .footer-column li{
-            margin:8px 0;
-
-            color:#aab9c5;
-
-            font-size:.76rem;
-        }
-
-
-        .footer-column a{
-            color:#aab9c5;
-
-            transition:.2s;
-        }
-
-
-        .footer-column a:hover{
-            color:white;
-        }
-
-
-        .footer-column i{
-            width:18px;
-
-            color:var(--light-copper);
-
-            font-size:.65rem;
-        }
-
-
-        .footer-contact-item{
-            display:flex;
-
-            align-items:flex-start;
-
-            gap:9px;
-        }
-
-
-        .footer-bottom{
-            display:flex;
-
-            align-items:center;
-            justify-content:space-between;
-
-            gap:20px;
-
-            margin-top:40px;
-
-            padding-top:20px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.1);
-
-            color:#8295a4;
-
-            font-size:.67rem;
-        }
+.footer-bottom a{
+    color:var(--light-copper);
+}
 
 
-        .footer-bottom a{
-            color:var(--light-copper);
-        }
+/* ==================================================
+   FOOTER RESPONSIVE
+================================================== */
+
+@media(max-width:950px){
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:40px 30px;
+    }
+
+}
+
+@media(max-width:620px){
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .footer-brand{
+        text-align:center;
+    }
+
+    .footer-brand p{
+        margin:auto;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
 
 
         /* =========================
@@ -2231,30 +2262,24 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================= -->
+================================================== -->
 
 <footer>
 
     <div class="container">
 
-
         <div class="footer-grid">
-
 
             <!-- BRAND -->
 
             <div class="footer-brand">
 
-                <a href="index.html">
-
-                    <img
-                        src="img/footer.png"
-                        alt="WebTechGhar"
-                    >
-
-                </a>
+                <img
+                    src="img/footer.png"
+                    alt="WebTechGhar"
+                >
 
                 <h3>
                     WebTechGhar
@@ -2262,13 +2287,11 @@
 
                 <p>
                     Think Digital • Build Better.
-                    Professional web development,
-                    design and digital solutions for
-                    modern businesses.
+                    Professional web development and
+                    digital solutions for modern businesses.
                 </p>
 
             </div>
-
 
 
             <!-- QUICK LINKS -->
@@ -2282,7 +2305,7 @@
                 <ul>
 
                     <li>
-                        <a href="index.html">
+                        <a href="index.html#home">
                             <i class="fas fa-angle-right"></i>
                             Home
                         </a>
@@ -2296,16 +2319,16 @@
                     </li>
 
                     <li>
-                        <a href="index.html#pricing">
+                        <a href="index.html#about">
                             <i class="fas fa-angle-right"></i>
-                            Pricing
+                            About
                         </a>
                     </li>
 
                     <li>
-                        <a href="index.html#faq">
+                        <a href="pricing.html">
                             <i class="fas fa-angle-right"></i>
-                            FAQ
+                            Pricing
                         </a>
                     </li>
 
@@ -2321,10 +2344,59 @@
             </div>
 
 
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html#services">
+                            <i class="fas fa-angle-right"></i>
+                            Web Design
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            <i class="fas fa-angle-right"></i>
+                            Web Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            <i class="fas fa-angle-right"></i>
+                            E-Commerce
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            <i class="fas fa-angle-right"></i>
+                            Graphic Design
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            <i class="fas fa-angle-right"></i>
+                            SEO & Marketing
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
 
             <!-- CONTACT -->
 
-            <div class="footer-column">
+            <div class="footer-column footer-contact">
 
                 <h3>
                     Contact
@@ -2334,9 +2406,13 @@
 
                     <li>
 
-                        <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
 
-                            <i class="fas fa-phone"></i>
+                        <div>
+
+                            <span>
+                                Phone / WhatsApp
+                            </span>
 
                             <a href="tel:+9779840976007">
                                 +977 9840976007
@@ -2349,9 +2425,13 @@
 
                     <li>
 
-                        <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
 
-                            <i class="fas fa-envelope"></i>
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
 
                             <a href="mailto:info@webtechghar.com">
                                 info@webtechghar.com
@@ -2364,13 +2444,17 @@
 
                     <li>
 
-                        <div class="footer-contact-item">
+                        <i class="fas fa-location-dot"></i>
 
-                            <i class="fas fa-location-dot"></i>
+                        <div>
 
                             <span>
-                                Biratnagar, Nepal
+                                Location
                             </span>
+
+                            <strong>
+                                Biratnagar, Nepal
+                            </strong>
 
                         </div>
 
@@ -2380,24 +2464,16 @@
 
             </div>
 
-
         </div>
 
-
-
-        <!-- FOOTER BOTTOM -->
 
         <div class="footer-bottom">
 
             <p>
-
-                ©
-                <span id="year"></span>
-                WebTechGhar.
+                © <span id="year"></span>
+                <strong>WebTechGhar</strong>.
                 All rights reserved.
-
             </p>
-
 
             <p>
 
@@ -2407,7 +2483,7 @@
 
                 &nbsp; • &nbsp;
 
-                <a href="terms.html">
+                <a href="terms-&-conditions.html">
                     Terms & Conditions
                 </a>
 
