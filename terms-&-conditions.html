@@ -581,6 +581,126 @@
 
 
         /* =========================
+        TABLE OF CONTENTS TOGGLE
+        ========================= */
+
+        .toc-toggle{
+        display:none;
+        width:100%;
+
+        align-items:center;
+        justify-content:space-between;
+
+        border:0;
+        background:transparent;
+
+        color:var(--blue);
+
+        font-size:.85rem;
+        font-weight:800;
+
+        cursor:pointer;
+
+        padding:0;
+
+        }
+
+        .toc-toggle span{
+        display:flex;
+        align-items:center;
+        gap:9px;
+        }
+
+        .toc-toggle > span i{
+        font-size:.9rem;
+        }
+
+        .toc-arrow{
+        font-size:.7rem;
+
+        transition:transform .25s ease;
+
+        }
+
+        .terms-sidebar.toc-open .toc-arrow{
+        transform:rotate(180deg);
+        }
+
+        .toc-content{
+        display:block;
+        }
+
+        /* =========================
+        MOBILE TABLE OF CONTENTS
+        ========================= */
+
+        @media(max-width:950px){
+
+        .terms-sidebar{
+            position:relative;
+            top:auto;
+        }
+
+        .toc-toggle{
+            display:flex;
+        }
+
+        .toc-content{
+            display:none;
+
+            margin-top:18px;
+
+            padding-top:17px;
+
+            border-top:1px solid var(--border);
+
+            animation:tocSlide .25s ease;
+        }
+
+        .terms-sidebar.toc-open .toc-content{
+            display:block;
+        }
+
+        }
+
+        @keyframes tocSlide{
+
+        from{
+            opacity:0;
+            transform:translateY(-6px);
+        }
+
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+        }
+
+        /* =========================
+        MOBILE SMALLER SPACING
+        ========================= */
+
+        @media(max-width:620px){
+
+        .terms-sidebar{
+            padding:16px 18px;
+            border-radius:15px;
+        }
+
+        .toc-toggle{
+            font-size:.82rem;
+        }
+
+        .toc-content{
+            margin-top:15px;
+            padding-top:15px;
+        }
+
+        }
+
+
+        /* =========================
            TERMS CONTENT
         ========================= */
 
@@ -1444,11 +1564,24 @@ footer{
 
         <!-- SIDEBAR -->
 
-        <aside class="terms-sidebar">
+                <aside class="terms-sidebar">
 
-            <h3>
-                On This Page
-            </h3>
+        <button
+            class="toc-toggle"
+            id="tocToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="tocMenu"
+        >
+            <span>
+                <i class="fas fa-list"></i>
+                Table of Contents
+            </span>
+
+            <i class="fas fa-chevron-down toc-arrow"></i>
+        </button>
+
+        <div class="toc-content" id="tocMenu">
 
 
             <nav>
@@ -2832,7 +2965,59 @@ footer{
         });
 
 
+    /* =========================
+    TABLE OF CONTENTS
+    ========================= */
 
+    const tocToggle =
+    document.getElementById("tocToggle");
+
+    const tocSidebar =
+    document.querySelector(".terms-sidebar");
+
+    const tocLinks =
+    document.querySelectorAll(".toc-content a");
+
+    if(tocToggle){
+
+    tocToggle.addEventListener("click", () => {
+
+        const opened =
+            tocSidebar.classList.toggle("toc-open");
+
+        tocToggle.setAttribute(
+            "aria-expanded",
+            opened
+        );
+
+    });
+
+    }
+
+    /* Close TOC after selecting a section */
+
+    tocLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if(window.innerWidth <= 950){
+
+            tocSidebar.classList.remove(
+                "toc-open"
+            );
+
+            tocToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    });
+
+    });
+
+    
     /* =========================
        BACK TO TOP
     ========================= */
