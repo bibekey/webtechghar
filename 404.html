@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="The page you are looking for could not be found. Return to WebTechGhar and explore our web design and digital solutions."
+    >
+
+    <meta
+        name="robots"
+        content="noindex, follow"
+    >
+
+    <meta
+        name="author"
+        content="WebTechGhar"
+    >
+
+    <meta
+        name="theme-color"
+        content="#174c73"
+    >
+
+    <link
+        rel="icon"
+        href="img/logo.png"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <title>404 - Page Not Found | WebTechGhar</title>
+
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+
+            --blue:#174c73;
+            --dark-blue:#0d3553;
+
+            --copper:#b8785b;
+            --light-copper:#d29a7e;
+
+            --text:#172331;
+            --gray:#667484;
+
+            --light-bg:#f6f9fc;
+            --white:#ffffff;
+
+            --border:#e5ebf1;
+
+            --green:#20b45d;
+
+            --shadow:
+                0 25px 70px rgba(15,42,66,.12);
+
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        *,
+        *::before,
+        *::after {
+
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+
+            -webkit-tap-highlight-color:transparent;
+
+        }
+
+
+        html {
+
+            scroll-behavior:smooth;
+
+        }
+
+
+        html,
+        body {
+
+            width:100%;
+            min-height:100%;
+
+        }
+
+
+        body {
+
+            font-family:Inter,Arial,sans-serif;
+
+            color:var(--text);
+
+            background:#ffffff;
+
+            line-height:1.6;
+
+            -webkit-font-smoothing:antialiased;
+
+            overflow-x:hidden;
+
+        }
+
+
+        a {
+
+            text-decoration:none;
+
+            color:inherit;
+
+        }
+
+
+        button {
+
+            font:inherit;
+
+        }
+
+
+        .container {
+
+            width:min(1160px,92%);
+
+            margin:auto;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            position:fixed;
+
+            top:0;
+            left:0;
+
+            width:100%;
+
+            z-index:1000;
+
+            background:rgba(255,255,255,.90);
+
+            backdrop-filter:blur(18px);
+
+            border-bottom:
+                1px solid rgba(229,235,241,.8);
+
+        }
+
+
+        .nav {
+
+            min-height:82px;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+            gap:25px;
+
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+
+            display:flex;
+
+            align-items:center;
+
+            gap:10px;
+
+        }
+
+
+        .logo img {
+
+            width:52px;
+
+            height:52px;
+
+            object-fit:contain;
+
+        }
+
+
+        .logo-text {
+
+            font-family:Poppins,sans-serif;
+
+            font-size:1.3rem;
+
+            font-weight:800;
+
+            color:var(--blue);
+
+        }
+
+
+        .logo-text span {
+
+            color:var(--copper);
+
+        }
+
+
+        .logo small {
+
+            display:block;
+
+            color:var(--gray);
+
+            font-size:.43rem;
+
+            font-weight:700;
+
+            letter-spacing:1.1px;
+
+            margin-top:-3px;
+
+            margin-left:5px;
+
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav-links {
+
+            display:flex;
+
+            align-items:center;
+
+            gap:27px;
+
+            font-size:.88rem;
+
+            font-weight:600;
+
+        }
+
+
+        .nav-links a {
+
+            position:relative;
+
+            padding:28px 0;
+
+        }
+
+
+        .nav-links a::after {
+
+            content:"";
+
+            position:absolute;
+
+            left:0;
+
+            bottom:20px;
+
+            width:0;
+
+            height:2px;
+
+            background:var(--copper);
+
+            transition:.3s;
+
+        }
+
+
+        .nav-links a:hover::after {
+
+            width:100%;
+
+        }
+
+
+        .nav-cta {
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:8px;
+
+            background:var(--blue);
+
+            color:white;
+
+            padding:12px 18px;
+
+            border-radius:11px;
+
+            font-size:.82rem;
+
+            font-weight:800;
+
+            transition:.3s;
+
+        }
+
+
+        .nav-cta:hover {
+
+            background:var(--dark-blue);
+
+            transform:translateY(-2px);
+
+        }
+
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        .menu {
+
+            display:none;
+
+            border:0;
+
+            background:none;
+
+            color:var(--blue);
+
+            font-size:1.45rem;
+
+            cursor:pointer;
+
+        }
+
+
+        /* =========================
+           404 HERO
+        ========================= */
+
+        .error-page {
+
+            min-height:100vh;
+
+            padding:
+                145px 0
+                90px;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            position:relative;
+
+            overflow:hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(23,76,115,.09),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 90% 75%,
+                    rgba(184,120,91,.13),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f7fafc
+                );
+
+        }
+
+
+        /* BACKGROUND SHAPES */
+
+        .shape {
+
+            position:absolute;
+
+            border-radius:50%;
+
+            pointer-events:none;
+
+        }
+
+
+        .shape-one {
+
+            width:320px;
+
+            height:320px;
+
+            right:-130px;
+
+            top:140px;
+
+            border:
+                1px solid rgba(184,120,91,.16);
+
+            animation:
+                float 6s ease-in-out infinite;
+
+        }
+
+
+        .shape-two {
+
+            width:220px;
+
+            height:220px;
+
+            left:-100px;
+
+            bottom:80px;
+
+            border:
+                1px solid rgba(23,76,115,.13);
+
+            animation:
+                float 7s ease-in-out infinite reverse;
+
+        }
+
+
+        .shape-three {
+
+            width:80px;
+
+            height:80px;
+
+            right:18%;
+
+            bottom:14%;
+
+            background:
+                rgba(184,120,91,.08);
+
+            transform:rotate(45deg);
+
+            border-radius:18px;
+
+            animation:
+                float 5s ease-in-out infinite;
+
+        }
+
+
+        /* =========================
+           ERROR CONTENT
+        ========================= */
+
+        .error-content {
+
+            width:min(850px,100%);
+
+            text-align:center;
+
+            position:relative;
+
+            z-index:2;
+
+            animation:
+                fadeUp .8s ease both;
+
+        }
+
+
+        .error-badge {
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:8px;
+
+            padding:8px 14px;
+
+            margin-bottom:22px;
+
+            border:
+                1px solid rgba(184,120,91,.22);
+
+            background:
+                rgba(184,120,91,.07);
+
+            color:var(--copper);
+
+            border-radius:50px;
+
+            font-size:.73rem;
+
+            font-weight:800;
+
+            letter-spacing:1.3px;
+
+            text-transform:uppercase;
+
+        }
+
+
+        .error-badge i {
+
+            font-size:.8rem;
+
+        }
+
+
+        /* =========================
+           404 NUMBER
+        ========================= */
+
+        .error-number {
+
+            font-family:Poppins,sans-serif;
+
+            font-size:
+                clamp(7rem,20vw,13rem);
+
+            line-height:.9;
+
+            font-weight:800;
+
+            letter-spacing:-10px;
+
+            margin-left:-10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--blue),
+                    var(--copper)
+                );
+
+            -webkit-background-clip:text;
+
+            background-clip:text;
+
+            color:transparent;
+
+            text-shadow:
+                0 20px 50px rgba(23,76,115,.10);
+
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .error-content h1 {
+
+            font-family:Poppins,sans-serif;
+
+            font-size:
+                clamp(1.7rem,4vw,2.8rem);
+
+            line-height:1.2;
+
+            margin:
+                18px auto
+                14px;
+
+            color:var(--text);
+
+        }
+
+
+        .error-content h1 span {
+
+            color:var(--copper);
+
+        }
+
+
+        .error-content p {
+
+            max-width:620px;
+
+            margin:0 auto;
+
+            color:var(--gray);
+
+            font-size:.92rem;
+
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .error-actions {
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            flex-wrap:wrap;
+
+            gap:12px;
+
+            margin-top:30px;
+
+        }
+
+
+        .btn {
+
+            display:inline-flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:9px;
+
+            padding:13px 21px;
+
+            border-radius:12px;
+
+            font-size:.82rem;
+
+            font-weight:800;
+
+            transition:.3s;
+
+        }
+
+
+        .btn-primary {
+
+            background:var(--blue);
+
+            color:white;
+
+            box-shadow:
+                0 10px 25px rgba(23,76,115,.15);
+
+        }
+
+
+        .btn-primary:hover {
+
+            background:var(--dark-blue);
+
+            transform:translateY(-3px);
+
+            box-shadow:
+                0 15px 30px rgba(23,76,115,.22);
+
+        }
+
+
+        .btn-outline {
+
+            background:white;
+
+            color:var(--blue);
+
+            border:
+                1px solid #ccd8e2;
+
+        }
+
+
+        .btn-outline:hover {
+
+            border-color:var(--blue);
+
+            transform:translateY(-3px);
+
+        }
+
+
+        /* =========================
+           QUICK LINKS
+        ========================= */
+
+        .quick-links {
+
+            display:flex;
+
+            justify-content:center;
+
+            flex-wrap:wrap;
+
+            gap:10px;
+
+            margin-top:35px;
+
+        }
+
+
+        .quick-links a {
+
+            display:inline-flex;
+
+            align-items:center;
+
+            gap:7px;
+
+            padding:8px 13px;
+
+            background:white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:9px;
+
+            color:var(--gray);
+
+            font-size:.72rem;
+
+            font-weight:700;
+
+            transition:.25s;
+
+        }
+
+
+        .quick-links a i {
+
+            color:var(--copper);
+
+        }
+
+
+        .quick-links a:hover {
+
+            color:var(--blue);
+
+            border-color:
+                rgba(23,76,115,.25);
+
+            transform:translateY(-2px);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+
+            padding:25px 0;
+
+            background:#0b2438;
+
+            color:white;
+
+        }
+
+
+        .footer-inner {
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+            gap:20px;
+
+        }
+
+
+        .footer-copy {
+
+            color:#8295a4;
+
+            font-size:.7rem;
+
+        }
+
+
+        .footer-copy strong {
+
+            color:#d4dde3;
+
+        }
+
+
+        .footer-links {
+
+            display:flex;
+
+            align-items:center;
+
+            gap:18px;
+
+        }
+
+
+        .footer-links a {
+
+            color:#8295a4;
+
+            font-size:.7rem;
+
+            transition:.2s;
+
+        }
+
+
+        .footer-links a:hover {
+
+            color:white;
+
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+
+            position:fixed;
+
+            right:22px;
+
+            bottom:22px;
+
+            width:54px;
+
+            height:54px;
+
+            display:grid;
+
+            place-items:center;
+
+            border-radius:50%;
+
+            background:var(--green);
+
+            color:white;
+
+            font-size:1.4rem;
+
+            z-index:900;
+
+            box-shadow:
+                0 12px 30px rgba(32,180,93,.3);
+
+            animation:
+                pulse 2.2s infinite;
+
+            transition:.25s;
+
+        }
+
+
+        .whatsapp:hover {
+
+            transform:scale(1.1);
+
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity:0;
+
+                transform:translateY(25px);
+
+            }
+
+            to {
+
+                opacity:1;
+
+                transform:translateY(0);
+
+            }
+
+        }
+
+
+        @keyframes float {
+
+            0%,
+            100% {
+
+                transform:translateY(0);
+
+            }
+
+            50% {
+
+                transform:translateY(-15px);
+
+            }
+
+        }
+
+
+        @keyframes pulse {
+
+            0% {
+
+                box-shadow:
+                    0 12px 30px rgba(32,180,93,.3),
+                    0 0 0 0 rgba(32,180,93,.25);
+
+            }
+
+            70% {
+
+                box-shadow:
+                    0 12px 30px rgba(32,180,93,.3),
+                    0 0 0 10px rgba(32,180,93,0);
+
+            }
+
+            100% {
+
+                box-shadow:
+                    0 12px 30px rgba(32,180,93,.3),
+                    0 0 0 0 rgba(32,180,93,0);
+
+            }
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width:950px) {
+
+            .nav-links {
+
+                position:absolute;
+
+                top:82px;
+
+                left:4%;
+
+                right:4%;
+
+                display:none;
+
+                flex-direction:column;
+
+                padding:18px;
+
+                gap:3px;
+
+                background:white;
+
+                border:
+                    1px solid var(--border);
+
+                border-radius:18px;
+
+                box-shadow:var(--shadow);
+
+            }
+
+
+            .nav-links.open {
+
+                display:flex;
+
+            }
+
+
+            .nav-links a {
+
+                width:100%;
+
+                padding:11px;
+
+            }
+
+
+            .nav-links a::after {
+
+                bottom:4px;
+
+            }
+
+
+            .nav-cta {
+
+                display:none;
+
+            }
+
+
+            .menu {
+
+                display:block;
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width:620px) {
+
+            .nav {
+
+                min-height:72px;
+
+            }
+
+
+            .logo img {
+
+                width:45px;
+
+                height:45px;
+
+            }
+
+
+            .logo-text {
+
+                font-size:1.05rem;
+
+            }
+
+
+            .logo small {
+
+                font-size:.34rem;
+
+            }
+
+
+            .error-page {
+
+                padding:
+                    115px 0
+                    70px;
+
+                min-height:
+                    calc(100vh - 72px);
+
+            }
+
+
+            .error-number {
+
+                font-size:
+                    clamp(6rem,30vw,9rem);
+
+                letter-spacing:-6px;
+
+                margin-left:-6px;
+
+            }
+
+
+            .error-content h1 {
+
+                font-size:1.65rem;
+
+            }
+
+
+            .error-content p {
+
+                font-size:.82rem;
+
+                padding:0 8px;
+
+            }
+
+
+            .error-actions {
+
+                flex-direction:column;
+
+                width:100%;
+
+                padding:0 15px;
+
+            }
+
+
+            .error-actions .btn {
+
+                width:100%;
+
+            }
+
+
+            .quick-links {
+
+                gap:7px;
+
+                padding:0 10px;
+
+            }
+
+
+            .quick-links a {
+
+                font-size:.68rem;
+
+                padding:7px 10px;
+
+            }
+
+
+            .shape-one {
+
+                width:200px;
+
+                height:200px;
+
+                right:-120px;
+
+            }
+
+
+            .shape-two {
+
+                width:150px;
+
+                height:150px;
+
+                left:-90px;
+
+            }
+
+
+            .shape-three {
+
+                display:none;
+
+            }
+
+
+            .footer-inner {
+
+                flex-direction:column;
+
+                text-align:center;
+
+            }
+
+
+            .footer-links {
+
+                gap:14px;
+
+            }
+
+
+            .whatsapp {
+
+                width:48px;
+
+                height:48px;
+
+                right:15px;
+
+                bottom:15px;
+
+                font-size:1.25rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header id="header">
+
+    <div class="container nav">
+
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="img/logo.png"
+                alt="WebTechGhar Logo"
+            >
+
+            <div>
+
+                <div class="logo-text">
+                    WebTech<span>Ghar</span>
+                </div>
+
+                <small>
+                    THINK DIGITAL • BUILD BETTER
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="process.html">
+                Process
+            </a>
+
+            <a href="pricing.html">
+                Pricing
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a
+            class="nav-cta"
+            href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20a%20website."
+        >
+
+            Start a Project
+
+            <i class="fas fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+        <button
+            class="menu"
+            id="menu"
+            aria-label="Open menu"
+        >
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     404 CONTENT
+========================= -->
+
+<main>
+
+    <section class="error-page">
+
+
+        <div class="shape shape-one"></div>
+
+        <div class="shape shape-two"></div>
+
+        <div class="shape shape-three"></div>
+
+
+        <div class="container">
+
+
+            <div class="error-content">
+
+
+                <div class="error-badge">
+
+                    <i class="fas fa-triangle-exclamation"></i>
+
+                    Error 404
+
+                </div>
+
+
+                <div
+                    class="error-number"
+                    aria-label="404"
+                >
+                    404
+                </div>
+
+
+                <h1>
+                    Page <span>Not Found</span>
+                </h1>
+
+
+                <p>
+
+                    Sorry, the page you're looking for
+                    doesn't exist, has been moved, or the
+                    link may be incorrect.
+
+                    Don't worry — let's get you back
+                    on the right path.
+
+                </p>
+
+
+                <div class="error-actions">
+
+
+                    <a
+                        href="index.html"
+                        class="btn btn-primary"
+                    >
+
+                        <i class="fas fa-house"></i>
+
+                        Back to Home
+
+                    </a>
+
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-outline"
+                    >
+
+                        <i class="fas fa-envelope"></i>
+
+                        Contact Us
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="quick-links">
+
+
+                    <a href="services.html">
+
+                        <i class="fas fa-layer-group"></i>
+
+                        Services
+
+                    </a>
+
+
+                    <a href="pricing.html">
+
+                        <i class="fas fa-tags"></i>
+
+                        Pricing
+
+                    </a>
+
+
+                    <a href="about.html">
+
+                        <i class="fas fa-building"></i>
+
+                        About
+
+                    </a>
+
+
+                    <a href="process.html">
+
+                        <i class="fas fa-route"></i>
+
+                        Process
+
+                    </a>
+
+
+                    <a href="contact.html">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Contact
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-inner">
+
+
+        <p class="footer-copy">
+
+            © <span id="year"></span>
+
+            <strong>WebTechGhar</strong>.
+
+            All rights reserved.
+
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms-&-conditions.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/9779840976007?text=Hello%20WebTechGhar%2C%20I%20need%20help%20with%20your%20website."
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with WebTechGhar on WhatsApp"
+>
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menu =
+        document.getElementById("menu");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    menu.addEventListener("click", () => {
+
+        navLinks.classList.toggle("open");
+
+    });
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("open");
+
+            });
+
+        });
+
+
+    /* =========================
+       YEAR
+    ========================= */
+
+    document
+        .getElementById("year")
+        .textContent =
+        new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>
